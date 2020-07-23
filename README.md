@@ -24,8 +24,8 @@ La Audiencia objetivo será profesionales, estudiantes, aficionados, academias m
 Log In / search
 
 * FENDER:
-Header / Hover (Music World imagen en categorias)
-Paginas principal de productos
+Header / Hover (Music World imagen en categorias), 
+Paginas principal de productos, 
 Footer (sin account /mas sobre fender)
 
 * GIBSON:
@@ -35,7 +35,7 @@ Detalle de producto
 Carrito de compras / Pago
 
 * Hoffman:
-Menus intrumentos con fotos
+Menus intrumentos con fotos, 
 Contaco
 
 * Market Facebook:
@@ -45,9 +45,9 @@ Contacto con usuario
 Formulario de carga (adaptado) / Menu de usuario
 
 * Music World:
-Panel lateral derecho: redes sociales, favoritos y volver arriba.
-Carrusel 100%
-Header Fixed
+Panel lateral derecho: redes sociales, favoritos y volver arriba,
+Carrusel 100%, 
+Header Fixed, 
 lista de marcas
 
 ## Wireframe
