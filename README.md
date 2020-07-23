@@ -36,7 +36,7 @@ Carrito de compras / Pago
 
 * Hoffman:
 Menus intrumentos con fotos, 
-Contaco
+Contacto
 
 * Market Facebook:
 Contacto con usuario
