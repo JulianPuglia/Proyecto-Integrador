@@ -9,7 +9,7 @@ El sitio tratará de comercialización de instrumentos y accesorios musicales co
 
 
 La Audiencia objetivo será profesionales, estudiantes, aficionados, academias musicales e instituciones académica, buscamos safisfacer las necesidades  del cliente cumpliendo con sus expectativas.
-## Listado de cinco paginas referentes
+## Listado de paginas referentes
 * [MA Lighting](https://www.malighting.com/)
 * [Fender](https://shop.fender.com/es/intl/start)
 * [Gibson](https://www.gibson.com/)
