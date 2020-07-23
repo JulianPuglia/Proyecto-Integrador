@@ -51,12 +51,15 @@ Header Fixed,
 lista de marcas
 
 ## Wireframe
-- Home
-- Seccion de productos
-- Formulario de carga de productos
-- Carrito de compras
-- Perfil del usuario
-- Formulario de Registro y Login
+- [Home]
+- [Seccion de productos]
+- [Formulario de carga de productos]
+- [Carrito de compras]
+- [Perfil del usuario]
+- [Formulario de Registro]
+- [Login]
+- [Contacto]
+
 ## Diseño
 * Nombre: Sound Power
 * [Logo](https://github.com/JulianPuglia/grupo_4_SoundPower/tree/master/spring1/desing/logo/logo.png)
