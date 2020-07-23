@@ -16,7 +16,7 @@ La Audiencia objetivo será profesionales, estudiantes, aficionados, academias m
 * [Music World](https://www.musicworld.cl/)
 * [Under Music](http://www.undermusic.com.ar/web/)
 * [Hoffmann](https://www.hoffmannmusica.com.ar/)
-* [olx](https://www.olx.com.ar/)
+* [OLX](https://www.olx.com.ar/)
 
 ## De las páginas mencionadas recopilamos y destacamos:
 
