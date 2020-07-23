@@ -48,6 +48,7 @@ Formulario de carga (adaptado) / Menu de usuario
 Panel lateral derecho: redes sociales, favoritos y volver arriba.
 Carrusel 100%
 Header Fixed
+lista de marcas
 
 ## Wireframe
 - Home
