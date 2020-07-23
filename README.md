@@ -15,9 +15,40 @@ La Audiencia objetivo será profesionales, estudiantes, aficionados, academias m
 * [Gibson](https://www.gibson.com/)
 * [Music World](https://www.musicworld.cl/)
 * [Under Music](http://www.undermusic.com.ar/web/)
+* [Hoffmann](https://www.hoffmannmusica.com.ar/)
+* [olx](https://www.olx.com.ar/)
 
+## De las páginas mencionadas recopilamos y destacamos:
 
-De las paginas mencionadas recopilamos y destacamos su diseño, orden del producto, carrito de compras, entre otros.
+* MA LIGHTING
+Log In / search
+
+* FENDER:
+Header / Hover (Music World imagen en categorias)
+Paginas principal de productos
+Footer (sin account /mas sobre fender)
+
+* GIBSON:
+Detalle de producto
+
+* Undermusic
+Carrito de compras / Pago
+
+* Hoffman:
+Menus intrumentos con fotos
+Contaco
+
+* Market Facebook:
+Contacto con usuario
+
+* Olx
+Formulario de carga (adaptado) / Menu de usuario
+
+* Music World:
+Panel lateral derecho: redes sociales, favoritos y volver arriba.
+Carrusel 100%
+Header Fixed
+
 ## Wireframe
 - Home
 - Seccion de productos
