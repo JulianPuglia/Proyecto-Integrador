@@ -36,7 +36,7 @@ Carrito de compras / Pago
 
 * Hoffman:
 Menus intrumentos con fotos, 
-Contaco
+Contacto
 
 * Market Facebook:
 Contacto con usuario
@@ -59,7 +59,7 @@ lista de marcas
 - Formulario de Registro y Login
 ## Diseño
 * Nombre: Sound Power
-* Logo
+* [Logo](https://github.com/JulianPuglia/grupo_4_SoundPower/tree/master/spring1/desing/logo/logo.png)
 * Paleta de colores: [Colores](https://colorhunt.co/palette/74172)
-* Tipografia: [pagina](https://www.1001fonts.com/)
-* Título: Hemi Head
+* Tipografia para Página: [Convergence](https://fonts.google.com/specimen/Convergence)
+* Nombre: [Hemi Head](https://www.1001fonts.com/hemi-head-426-font.html)
