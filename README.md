@@ -51,14 +51,14 @@ Header Fixed,
 lista de marcas
 
 ## Wireframe
-- [Home]
-- [Seccion de productos]
-- [Formulario de carga de productos]
-- [Carrito de compras]
-- [Perfil del usuario]
-- [Formulario de Registro]
-- [Login]
-- [Contacto]
+- [Home](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Home.png)
+- [Seccion de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Principal de productos.png)
+- [Formulario de carga de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Formulario-productos.png)
+- [Carrito de compras](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Carrito.png)
+- [Perfil del usuario](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Perfil de usuario.png)
+- [Formulario de Registro](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/nuevoUsuario.png)
+- [Login](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/panel funcionando.png)
+- [Contacto](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/contacto.png)
 
 ## Diseño
 * Nombre: Sound Power
