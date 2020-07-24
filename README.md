@@ -52,12 +52,12 @@ lista de marcas
 
 ## Wireframe
 - [Home](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Home.png)
-- [Seccion de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Principal de productos.png)
+- [Seccion de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/PrincipalProductos.png)
 - [Formulario de carga de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Formulario-productos.png)
 - [Carrito de compras](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Carrito.png)
-- [Perfil del usuario](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Perfil de usuario.png)
+- [Perfil del usuario](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/PerfilUsuario.png)
 - [Formulario de Registro](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/nuevoUsuario.png)
-- [Login](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/panel funcionando.png)
+- [Login](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/panelFuncionando.png)
 - [Contacto](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/contacto.png)
 
 ## Diseño
