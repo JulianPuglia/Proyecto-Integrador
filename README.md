@@ -52,7 +52,7 @@ lista de marcas
 
 ## Wireframe
 - [Home](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Home.png)
-- [Seccion de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/PrincipalProductos.png)
+- [Seccion de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/principalProductos.png)
 - [Formulario de carga de productos](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Formulario-productos.png)
 - [Carrito de compras](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/Carrito.png)
 - [Perfil del usuario](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/wireframe/PerfilUsuario.png)
