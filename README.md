@@ -62,7 +62,7 @@ lista de marcas
 
 ## Diseño
 * Nombre: Sound Power
-* [Logo](https://github.com/JulianPuglia/grupo_4_SoundPower/tree/master/spring1/desing/logo/logo.png)
+* [Logo](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/sprint1/desing/logo/logo.png)
 * Paleta de colores: [Colores](https://colorhunt.co/palette/74172)
 * Tipografia para Página: [Convergence](https://fonts.google.com/specimen/Convergence)
 * Nombre: [Hemi Head](https://www.1001fonts.com/hemi-head-426-font.html)
