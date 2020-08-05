@@ -35,6 +35,6 @@ Luego de analizar nuestra primera entrega llegamos a la conclusion que:
 
 ## Diagrama Starfish
 
-[Starfish Diagram](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/Retrospectivas/StarfishD/StarfishDiagram1.png)
+[Starfish Diagram](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/RETROSPECTIVAS/StarfishD/StarfishDiagram1.png)
 
 
