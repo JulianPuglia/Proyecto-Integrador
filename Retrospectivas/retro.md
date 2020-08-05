@@ -4,7 +4,7 @@
 * Lima, Rocio Milagros
 * Rogido, Francisco
 * Puglia, Julian
-## Retrospectiva del primer Spring
+# Retrospectiva del primer Spring
 
 Luego de analizar nuestra primera entrega llegamos a la conclusion que: 
 
@@ -12,7 +12,7 @@ Luego de analizar nuestra primera entrega llegamos a la conclusion que:
 * Organizarnos de forma efectiva en cuanto al tiempo
 * Tenemos una buena comunicacion como equipo
 
-# Como resultado de Starfish diagram obtuvimos las siguientes  definiciones:
+## Como resultado de Starfish diagram obtuvimos las siguientes  definiciones:
 
 ### Empezar a hacer
 
