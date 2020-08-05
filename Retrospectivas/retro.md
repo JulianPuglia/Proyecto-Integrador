@@ -26,7 +26,7 @@ Luego de analizar nuestra primera entrega llegamos a la conclusion que:
 
 ### Hacer Mas
 
-*Brainstorming, debido a que la dinamica de grupo funciona bien consideramos que para evaluar cambios o acciones en la pagina esta bueno hablarlo entre todos para llegar a un comun acuerdo de las maneras a impletarlas 
+* Brainstorming, debido a que la dinamica de grupo funciona bien consideramos que para evaluar cambios o acciones en la pagina esta bueno hablarlo entre todos para llegar a un comun acuerdo de las maneras a impletarlas 
 * Mejor Utilización de TRELLO 
 
 ### Seguir Haciendo
