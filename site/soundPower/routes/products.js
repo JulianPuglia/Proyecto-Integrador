@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var productsController = require('../controllers/productsControllers')
+var Controller = require('../controllers/productsControllers')
 
 /* GET products page. */
-router.get('/', productsController.products);
+router.get('/', Controller.products);
 /* GET product Detail page*/
-router.get('/productsDetails', productsController.productsDetails)
+router.get('/details', Controller.productsDetails);
+/* GET product Detail page*/
+router.get('/add', Controller.productAdd);
 
 
 module.exports = router;
