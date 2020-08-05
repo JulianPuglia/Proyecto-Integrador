@@ -33,6 +33,6 @@ Luego de analizar nuestra primera entrega llegamos a la conclusion que:
 * Comunicación y distribucion de tareas, debido a que consideramos que tuvimos una muy buena distribución y una comunicación constante lo tomamos como eje de nuestro grupo 
 
 ### Diagrama Starfish
-(Starfish Diagram)[https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/Retrospectivas/StarfishD/StarfishDiagram1.png]
+[Starfish Diagram](https://github.com/JulianPuglia/grupo_4_SoundPower/blob/master/Retrospectivas/StarfishD/StarfishDiagram1.png)
 
 
