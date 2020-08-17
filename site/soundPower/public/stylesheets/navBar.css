@@ -1,0 +1,136 @@
+
+body {
+  
+    background-color: #222222;
+    font: 14px "convergence";
+    text-decoration: none;
+    color: #045757;
+  }
+  
+  #logo{
+    width: 100%;
+    
+  }
+  
+  .navbar-expand-md{
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    width: 100vw;
+    background-color: #e4e4e4;
+    text-align: right;
+    
+  }
+  
+  .navbar-expand-md .navbar-toggler {
+    color: #045757;
+  }
+  
+  
+  .navbar-expand-md .menu ul{
+    margin-left:50vh ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: block ;
+    box-sizing: content-box;
+    text-decoration: none;
+    color: #045757;
+  }
+  
+  .navbar-expand-md .links .menu li a  {
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    width: 100%;
+    text-align: right;
+    text-decoration: none;
+    justify-content: space-around;
+    color: #045757;
+    padding-right: 5px;
+  }
+  
+  #dropdownMenuButton{
+    flex-wrap: wrap;
+    display: block;
+    width: 100%;
+   justify-content: space-around;
+    text-decoration: none;
+    color: #045757;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    margin: 0px 10px;
+    
+  }
+  .navbar-expand-md .cart .carrito{
+    flex-wrap: wrap;
+    display: block;
+    text-decoration: none;
+    color: #045757;
+    text-align: right;
+    align-items: right;
+    width: 100%;
+   
+  }
+  
+  
+  
+  
+  
+  /* --- VERSION PARA TABLET --- */
+  
+  @media(min-width:768px){
+    .navbar-expand-md{
+      opacity: 85%;
+      margin-top: 18vh;
+    }
+    #logo{
+      flex-wrap: wrap;
+      display: flex;
+      box-sizing: border-box;
+      z-index: 1;
+      position: absolute;
+      
+      bottom: 5vh;
+      width: 95vw;
+    }
+  
+  .navbar-expand-md .links .menu li a{
+    flex-wrap: wrap;
+    display: flex;
+    box-sizing: border-box;
+    
+  }
+  .navbar-expand-md .links .menu li a  {
+    margin-left: 4vw ;
+  }
+}
+  
+  /* --- VERSION PARA ESCRITORIO --- */
+  
+  
+  
+  @media(min-width:1024px) {
+  
+  
+    body{
+      margin-top: 55px;
+    }
+    #logo{
+      flex-wrap: wrap;
+      z-index: 1;
+      position: absolute;
+      bottom: 1vh;
+      width: 50vh;
+    
+    }
+    .navbar-expand-md{
+      margin-top: 10vh;
+      position: relative;
+      
+  
+    }
+   
+    .navbar-expand-md .links .menu li a  {
+        margin-left: 2vw ;
+      }
+  }
