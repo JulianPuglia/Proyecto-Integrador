@@ -1,0 +1,22 @@
+
+h1{
+    text-align: center;
+}
+
+
+.publica .formulario{
+    justify-content: space-around;
+}
+ 
+.boton{
+    border-radius: 10px;
+    background-color:  #044343;
+    color:white;
+
+
+}
+.btn-primary{
+    margin: 10px;
+    background-color:#044343;
+    color: white;
+}
