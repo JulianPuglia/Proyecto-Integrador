@@ -1,0 +1,48 @@
+
+h3 {
+  text-align: center;
+  color: #e4e4e4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.productos{
+  background-color: #045757;
+  
+  padding:  10px 0px ;
+  
+  justify-content: center;
+}
+
+.productos .imagenes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.productos .imagenes a{
+ 
+  width: 150px;
+  height: 150px
+}
+.marcas {
+  border-top: 1px solid #045757;
+  padding:  30px 0px ;
+  border-bottom: 1px solid #045757;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-fluid-b {
+  
+  width: 150px;
+  height: 150px;
+  
+}
+ @media(min-width:720px){
+   .carrousel .display{
+    z-index: 0;}
+
+    .navbar-expand-md{
+      position: fixed;
+       }
+   }
+ 
