@@ -1,0 +1,46 @@
+.footer{
+    display: flex;
+   flex-wrap: wrap;
+    background-color: #045757;
+    
+}
+.footer p{
+    color:white;
+}
+.footer .row .logo{
+    width: 100%;
+}
+.footer ul li {
+    list-style: none;
+    color:white;
+}
+.footer ul li a{
+list-style: none;
+color: white;
+
+}
+.footer h6{
+    text-transform: uppercase;
+    color: white;
+}
+.footer a:hover{
+    color: white;
+}
+.footer .fileD{
+    list-style: none;
+    color: white;
+    
+}
+
+.footer .fileE{
+    border-top: 2px solid white;
+    text-align: left;
+} 
+
+
+.footer .logo{
+    
+    width: 100%;
+    height: auto;
+    ;
+  }

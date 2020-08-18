@@ -14,11 +14,11 @@ body {
   
   .navbar-expand-md{
     display: flex;
-    position: fixed;
     justify-content: space-around;
     width: 100vw;
     background-color: #e4e4e4;
     text-align: right;
+    z-index: 1;
     
   }
   
@@ -87,7 +87,7 @@ body {
       flex-wrap: wrap;
       display: flex;
       box-sizing: border-box;
-      z-index: 1;
+      z-index: 2;
       position: absolute;
       
       bottom: 5vh;
@@ -117,7 +117,7 @@ body {
     }
     #logo{
       flex-wrap: wrap;
-      z-index: 1;
+      z-index: 2;
       position: absolute;
       bottom: 1vh;
       width: 50vh;
