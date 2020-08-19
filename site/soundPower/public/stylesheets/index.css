@@ -7,9 +7,10 @@ h3 {
 }
 .productos{
   background-color: #045757;
-  
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding:  10px 0px ;
-  
+  border: 2px solid #044343;
   justify-content: center;
 }
 
@@ -19,7 +20,7 @@ h3 {
   justify-content: center;
 }
 .productos .imagenes a{
- 
+ justify-content: space-between;
   width: 150px;
   height: 150px
 }
@@ -37,12 +38,4 @@ h3 {
   height: 150px;
   
 }
- @media(min-width:720px){
-   .carrousel .display{
-    z-index: 0;}
 
-    .navbar-expand-md{
-      position: fixed;
-       }
-   }
- 

@@ -45,3 +45,8 @@ color: white;
     height: auto;
     ;
   }
+
+  .footer .fileA,.footer .fileB, .footer .fileC, .footer .fileD, .footer .fileE{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
