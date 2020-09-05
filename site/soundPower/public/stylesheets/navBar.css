@@ -104,6 +104,9 @@ body {
     margin-left: 4vw ;
   }
 }
+.navbar-expand-md{
+  position: fixed;
+}
   
   /* --- VERSION PARA ESCRITORIO --- */
   
@@ -125,7 +128,7 @@ body {
     }
     .navbar-expand-md{
       margin-top: 10vh;
-      position: relative;
+      position: fixed;
       
   
     }
