@@ -5,7 +5,7 @@ body {
     font: 14px "convergence";
     text-decoration: none;
     color: #045757;
-  }
+    }
   
   #logo{
     width: 100%;
@@ -18,14 +18,14 @@ body {
     width: 100vw;
     background-color: #e4e4e4;
     text-align: right;
-    z-index: 1;
+    z-index: 10;
+    position: absolute
     
   }
   
   .navbar-expand-md .navbar-toggler {
     color: #045757;
   }
-  
   
   .navbar-expand-md .menu ul{
     margin-left:50vh ;
@@ -37,7 +37,7 @@ body {
     color: #045757;
   }
   
-  .navbar-expand-md .links .menu li a  {
+  .navbar-expand-md .menu li a  {
     flex-wrap: wrap;
     box-sizing: content-box;
     width: 100%;
@@ -47,7 +47,18 @@ body {
     color: #045757;
     padding-right: 5px;
   }
-  
+
+  .navbar-expand-md .dropdown a  {
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    width: 100%;
+    text-decoration: none;
+    justify-content: space-around;
+    color: #045757;
+    
+    
+  }
+
   #dropdownMenuButton{
     flex-wrap: wrap;
     display: block;
@@ -72,7 +83,7 @@ body {
    
   }
   
-  
+ 
   
   
   

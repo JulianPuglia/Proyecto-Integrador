@@ -1,14 +1,14 @@
 /*custom font*/
 @import url(https://fonts.googleapis.com/css2?family=Convergence&display=swap);
 
-html {
-  /*background*/
-  background-color: #222222;
-}
-
 /*form styles*/
+.registro{
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+  display: flex;
 
-.Usuario,
+}
+.registro .Usuario,
 .registro .Datos,
 .registro .Tarjeta {
   background: #e4e4e4;
@@ -16,11 +16,26 @@ html {
   border-radius: 3px;
 
   padding: 20px 30px;
-  box-sizing: border-box;
+  
   align-content: center;
-  width: 80%;
-  margin: 0 10%;
+
 }
+
+.img-deco1{
+ display: none;
+}
+
+.img-deco2{
+ display: none;
+}
+
+.registro .Usuario,
+.registro .Datos{
+display: flex;
+flex-wrap: wrap;
+
+}
+
 /*inputs*/
 .registro .Usuario,
 .registro .Datos,
@@ -377,5 +392,29 @@ select option {
       -webkit-transform: rotateY(360deg);
       transform: rotateY(360deg);
     }
+  }
+
+
+}
+
+@media(min-width:1024px){
+  .img-deco1{
+    
+    width: 60vh;
+    
+    z-index: -20;
+    display: flex;
+  }
+  .img-deco2{
+    display: block;
+    
+    width: 60vh;
+    
+  }
+  .registro .Usuario,
+  .registro .Datos{
+  display: flex;
+  flex-wrap: wrap;
+  
   }
 }
