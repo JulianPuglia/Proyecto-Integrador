@@ -3,6 +3,9 @@ body{
     background-color: #222222;
 
 }
+h3{
+    color: black;
+}
 .carrito{
     background-color: #e4e4e4;
     padding-bottom: 10px;
