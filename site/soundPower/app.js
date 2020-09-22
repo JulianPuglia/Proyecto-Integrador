@@ -14,6 +14,8 @@ var loginRouter = require ('./routes/login')
 
 var app = express();
 
+app.listen(3030,() => console.log('servidor levantado en el puerto 3030'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
