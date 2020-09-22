@@ -1,5 +1,5 @@
 module.exports = {
-    'Register' : (req, res) => {
+    'register' : (req, res) => {
         res.render('register')
     }
 }

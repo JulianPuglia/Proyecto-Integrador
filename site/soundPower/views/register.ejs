@@ -1,197 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include("partials/head") %>
+<%- include("partials/head") %>
 
-  <body>
-    <%- include("partials/navbar") %>
-    <%- include("partials/social") %>
+<body>
+  <%- include("partials/navbar") %>
+  <%- include("partials/social") %>
 
-    <!--FORMULRIO DE CARGA-->
-    <div class="registro container">
-      <form class="col-12">
-        <fieldset class="Usuario row">
-          <h2 class="fs-title col-12">Crea tu Usuario</h2>
-          <label class="col-12 col-lg-4" for="email">Email</label>
-          <input class="col-12 col-lg-4" type="text" name="email" placeholder="Email" />
-          <label class="col-12 col-lg-4" for="password">Contraseña</label>
-          <input
-            class="col-12 col-lg-4"
-            type="password"
-            name="pass"
-            placeholder="Password"
-          />
-          <label class="col-12 col-lg-4" for="password">Repita Contraseña</label>
-          <input
-            class="col-12 col-lg-4"
-            type="password"
-            name="cpass"
-            placeholder="Confirma Password"
-          />
-        </fieldset>
-        <fieldset class="row Datos">
-          <h2 class="fs-title">Datos Personales</h2>
-          <label class="col-12 col-lg-4" for="email">Nombre</label>
-          <input class="col-12 col-lg-4" type="text" name="fname" placeholder="Nombre" />
-          <label class="col-12 col-lg-4" for="email">Apellido</label>
-          <input
-            class="col-12 col-lg-4"
-            type="text"
-            name="lname"
-            placeholder="Apellido"
-          />
-          <label class="col-12 col-lg-4" for="email">Telefono</label>
-          <input
-            class="col-12 col-lg-4"
-            type="text"
-            name="phone"
-            placeholder="Telefono"
-          />
-          <label class="col-12 col-lg-4" for="address">Domicilio</label>
-          <input
-            class="col-12 col-lg-4"
-            name="address"
-            placeholder="Direccion"
-          >
-    
-          
-        </fieldset>
-        <fieldset class="row Tarjeta">
-          <h2 class="fs-title col-12">Datos de tu Tarjeta</h2>
-          <div id="area">
-            <div class="master-card">
-              <div class="card col-12 col-md-12 col-lg-12">
-                <span class="title">Tarjeta de Credito</span>
-                <div class="input-number">
-                  <span class="title-number">Numero </span>
-                  <div class="inputs-number col-sm-12">
-                    <input
-                      type="text"
-                      maxlength="4"
-                      name="number-card"
-                      placeholder="0000"
-                      required="required"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      name="number-card"
-                      placeholder="0000"
-                      required="required"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      name="number-card"
-                      placeholder="0000"
-                      required="required"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      name="number-card"
-                      placeholder="0000"
-                      required="required"
-                    />
-                  </div>
-                  <div class="selects-date selecters">
-                    <div class="day-select">
-                      <span>DIA</span>
-                      <select id="dates">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                        <option value="">6</option>
-                        <option value="">7</option>
-                        <option value="">8</option>
-                        <option value="">9</option>
-                        <option value="">10</option>
-                        <option value="">11</option>
-                        <option value="">12</option>
-                        <option value="">13</option>
-                        <option value="">14</option>
-                        <option value="">15</option>
-                        <option value="">16</option>
-                        <option value="">17</option>
-                        <option value="">18</option>
-                        <option value="">19</option>
-                        <option value="">20</option>
-                        <option value="">21</option>
-                        <option value="">22</option>
-                        <option value="">23</option>
-                        <option value="">24</option>
-                        <option value="">25</option>
-                        <option value="">26</option>
-                        <option value="">27</option>
-                        <option value="">28</option>
-                        <option value="">29</option>
-                        <option value="">30</option>
-                      </select>
-                    </div>
-                    <div class="year-select">
-                      <span>AÑO</span>
-                      <select id="dates">
-                        <option value="">17</option>
-                        <option value="">18</option>
-                        <option value="">19</option>
-                        <option value="">20</option>
-                        <option value="">21</option>
-                        <option value="">22</option>
-                        <option value="">23</option>
-                        <option value="">24</option>
-                        <option value="">25</option>
-                        <option value="">26</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="mark-gold">
-                  <div class="round">
-                    <div class="circles">
-                      <div class="circle-1"></div>
-                      <div class="circle-2"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="name"><span>JEAN O IMPSUM</span></div>
-              </div>
-              <div class="card-back">
-                <div class="tire"></div>
-                <div class="secret-area">
-                  <input
-                    type="text"
-                    maxlength="3"
-                    name="number-card"
-                    placeholder="000"
-                    required="required"
-                  />
-                </div>
-                <div class="chip-card"></div>
-              </div>
-            </div>
-          </div>
-          <div class="btEnviar">
-            <button class="btn btn-submit" type="submit">Enviar</button>
-          </div>
-        </fieldset>
-      </form>
+  <!--FORMULRIO DE CARGA-->
+  <div class="registro container">
+    <form class="col-12">
+      <fieldset class="Usuario row">
+        <h2 class="fs-title col-12">Crea tu Usuario</h2>
+        <label class="col-12 col-lg-4" for="email">Email</label>
+        <input class="col-12 col-lg-4" type="text" name="email" placeholder="Email" />
+        <label class="col-12 col-lg-4" for="password">Contraseña</label>
+        <input class="col-12 col-lg-4" type="password" name="pass" placeholder="Password" />
+        <label class="col-12 col-lg-4" for="password">Repita Contraseña</label>
+        <input class="col-12 col-lg-4" type="password" name="cpass" placeholder="Confirma Password" />
+      </fieldset>
+      <fieldset class="row Datos">
+        <h2 class="fs-title">Datos Personales</h2>
+        <label class="col-12 col-lg-4" for="email">Nombre</label>
+        <input class="col-12 col-lg-4" type="text" name="fname" placeholder="Nombre" />
+        <label class="col-12 col-lg-4" for="email">Apellido</label>
+        <input class="col-12 col-lg-4" type="text" name="lname" placeholder="Apellido" />
+        <label class="col-12 col-lg-4" for="email">Telefono</label>
+        <input class="col-12 col-lg-4" type="text" name="phone" placeholder="Telefono" />
+        <label class="col-12 col-lg-4" for="address">Domicilio</label>
+        <input class="col-12 col-lg-4" name="address" placeholder="Direccion">
+      </fieldset>
 
-      <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"
-      ></script>
-    </div>
-  </body>
+    </form>
+
+  </div>
+</body>
+
+<%- include("partials/footer") %>
 </html>

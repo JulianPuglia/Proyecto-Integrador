@@ -10,10 +10,9 @@ var productsRouter = require('./routes/products');
 var cartRouter = require ('./routes/cart')
 var registerRouter = require ('./routes/register')
 var contactRouter = require ('./routes/contact')
+var loginRouter = require ('./routes/login')
 
 var app = express();
-
-app.listen(3030,() => console.log('servidor levantado en el puerto 3030'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,7 +30,7 @@ app.use('/products', productsRouter);
 app.use('/cart', cartRouter);
 app.use('/register', registerRouter)
 app.use('/contact', contactRouter)
-
+app.use('/login', loginRouter)
 
 // catch 404 and forward to error handler
 app.use ((req, res, next) => {
