@@ -1,23 +1,23 @@
-const fs = require('fs')
-const path = require('path')
-
-//let productos = fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'), 'utf8')
-//let dbProductos=JSON.parse(productos);
+const dbProducts = require('../data/database') //requiero la base de datos de productos
+const fs = require('fs');
+const path = require('path');
 
 module.exports = {
     'products' : (req, res) => {
         res.render('products',{
-            title:"Productos"
+            title:"Productos",
+            producto: dbProducts,
+            
         })
     },
     'productsDetails' : (req, res) => {
-        //let id = req.params.id
-        //let productoSeleccionado;
-        //dbProductos.forEach(producto => {
-            //if(dbProductos.id == id){
-                //productoSeleccionado = producto
-            //}
-        //});
+        let id = req.params.id
+        let productoSeleccionado;
+        dbProducts.forEach(producto => {
+            if(dbProducts.id == id){
+                productoSeleccionado = producto
+            }
+        });
         res.render('productDetails',{
            title: "Detalle de producto"
         })
