@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 .principal{
   position: relative;
+  margin-top: 5vh;
 }
 
 .principal h3 {
-=======
-.carousel-inner{
-  height: 300px;
-}
-h3 {
->>>>>>> 1e9deb6c4ad4fa4c572efd49e58a92a4d93dffbf
   text-align: center;
   color: #e4e4e4;
   text-transform: uppercase;

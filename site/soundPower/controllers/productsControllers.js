@@ -22,10 +22,15 @@ module.exports = {
            title: "Detalle de producto"
         })
     },
-    'productAdd' : (req, res) => {
+    'productsAdd' : (req, res) => {
         res.render('productAdd',{
             title:"Agregar Productos"
         })
+    },
+    'cart' : (req, res) => {
+        res.render('cart',{
+            title:"Carrito"
+        })
     }
-
 }
+
