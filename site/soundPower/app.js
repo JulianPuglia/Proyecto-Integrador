@@ -8,7 +8,6 @@ const methodOverride = require('method-override');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
-var registerRouter = require ('./routes/register')
 var contactRouter = require ('./routes/contact')
 
 var app = express();
@@ -30,7 +29,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-app.use('/register', registerRouter)
 app.use('/contact', contactRouter)
 
 
