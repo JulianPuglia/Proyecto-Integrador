@@ -1,11 +1,17 @@
 .login{
     
+<<<<<<< HEAD
     margin-top: 20vh;
+=======
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+>>>>>>> 5633ffb42e2414e71907bcecb5ffd09b3488e919
 }
 
 
 .login .main-head{
     height: 150px;
+<<<<<<< HEAD
     background: #FFF;
    
 }
@@ -71,3 +77,25 @@
     background-color: #000 !important;
     color: #fff;
 }
+=======
+    background: #e4e4e4;
+   
+}
+
+.login  {
+    
+    background-color: #e4e4e4;
+    opacity: 0.8;
+    border-radius: 5px;
+   
+}
+
+
+.login .main label {
+    text-transform: uppercase ;
+
+}
+
+
+
+>>>>>>> 5633ffb42e2414e71907bcecb5ffd09b3488e919
