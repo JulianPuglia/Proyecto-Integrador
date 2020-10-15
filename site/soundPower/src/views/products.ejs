@@ -7,32 +7,30 @@
     <%- include("partials/social") %>
     
 <div class="container">
-    <section class="listadoProductos"></section>
+    <section class="listadoProductos">
     <div class="row products">
         <div class="col-12">
-                
-                        <div class="titulo col-12">
-                            <h2>
-                                <%= title %>
-                            </h2>
-                        </div>
-                        <% producto.forEach(product => { %>
+              <h2>
+              <%= title %>
+              </h2>
+          
+                        <% producto.forEach(producto => { %>
 
-                            <div class="col-12 col-md-6 col-lg-3">
+                                    
 
-                                <div class="contenido">
-
-                                               <figure>
-                                        <a href="./products/detail/<%= producto.id %> "><img src="/images/products/<%- producto.image %>  " alt=" ">
-                                </a>
+                               <figure>
+                                   <a href="./products/details/<%= producto.id %> "><img src="/images/products/<%- producto.image %>  " alt=" ">
+                                            <%- producto.name %>
+                               </a>
                                     </figure>
-
+                                    <article>
+                                    
+                                                <p> 
+                                                    <%- producto.description %>
+                                                 </p>
+                                              
+                                    </article>
                                 
-                                </div>
-                           
-
-                            </div>
-                            
 
                             <% }) %> 
                     </div>

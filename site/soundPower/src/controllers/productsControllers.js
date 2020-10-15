@@ -3,31 +3,34 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = {
-    'products' : (req, res) => {
+    products : (req, res) => {
         res.render('products',{
             title:"Productos",
             producto: dbProducts,
             
         })
     },
-    'productsDetails' : (req, res) => {
-        let id = req.params.id
-        let productoSeleccionado;
-        dbProducts.forEach(producto => {
-            if(dbProducts.id == id){
-                productoSeleccionado = producto
-            }
-        });
-        res.render('productDetails',{
-           title: "Detalle de producto"
+    productsDetails : (req, res) => {
+        let id = req.params.id;
+        let producto = dbProducts.filter(producto => {
+            return producto.id == id
         })
+        res.render('productDetails', {
+            title: "Detalle del Producto",
+            id: id,
+            producto: producto[0],
+            price:producto.price,
+            image:producto.image
+            
+            }
+    )
     },
-    'productsAdd' : (req, res) => {
+    productsAdd : (req, res) => {
         res.render('productAdd',{
             title:"Agregar Productos"
         })
     },
-    'cart' : (req, res) => {
+    cart : (req, res) => {
         res.render('cart',{
             title:"Carrito"
         })
