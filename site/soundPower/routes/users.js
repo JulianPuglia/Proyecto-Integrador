@@ -13,8 +13,9 @@ router.post('/register',[
     check('lname').isLength(),
     check('phone').isInt({min:0}),
     check('address').isLength()
-],controller.register);
+],controller.save);
 //router.post('/register',controller.save)
 router.get('/login', controller.Login)
+//router.post('login',controller.process)//
 
 module.exports = router;
