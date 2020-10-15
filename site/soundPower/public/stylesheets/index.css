@@ -48,14 +48,14 @@
 
 @media(min-width:720px){
   .principal .carousel{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
     display: block;
     
   }
   
   .principal .carousel .carousel-inner .carousel-item{
-    height: 100vh; 
+    height: 50vw; 
     width: 100%;
   }
   .principal .carousel .carousel-inner .carousel-item img{
