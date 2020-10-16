@@ -34,6 +34,23 @@ module.exports = {
         res.render('cart',{
             title:"Carrito"
         })
+    },
+    modify: (req,res)=>{
+        let id = req.params.id;
+        let producto = dbProducts.filter(producto => {
+            return producto.id == id
+        })
+        res.render('modifyProduct', {
+            title: "Modificar Productos",
+            id: id,
+            producto: producto[0],
+            price:producto.price,
+            image:producto.image,
+            description:producto.description,
+            category:producto.category
+
+        }
+        )
     }
 }
 

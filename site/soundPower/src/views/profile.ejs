@@ -17,23 +17,83 @@
                         <%= title %>
                     </h2>
                 </div>
-                <div class="col-12">
-
-                    <div class="contenido">
+                                    <div class="contenido">
 
 
                         <ul class="nav nav-tabs " id="myTab" role="tablist">
                             <li class="nav-item " role="presentation">
-                                <a class="nav-link " id="home-tab" data-toggle="tab" href="#datos" role="tab" aria-controls="home" aria-selected="true">Mis Datos</a>
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#datos" role="tab" aria-controls="home" aria-selected="true">Mis Datos</a>
                             </li>
                             <li class="nav-item " role="presentation">
-                                <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#compras" role="tab" aria-controls="profile" aria-selected="false">Mis Compras</a>
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#compras" role="tab" aria-controls="profile" aria-selected="false">Mis Compras</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
 
                             <div class="tab-pane fade " id="datos" role="tabpanel" aria-labelledby="home-tab">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ut. Magni esse doloremque ipsum, ut asperiores deleniti laudantium sapiente veritatis debitis reiciendis soluta quis corporis deserunt odit beatae suscipit perspiciatis.
+                              <form action="/users/register" method="POST">
+                                <fieldset>
+                                  <div class="Datos col-12 col-lg-6">
+                                    <h2 class="fs-title">Datos Personales</h2>
+                                    <label class="col-12" for="name">Nombre</label>
+                                    <input
+                                      class="col-12"
+                                      type="text"
+                                      name="fname"
+                                      placeholder="Nombre"
+                                    />
+                                    <label class="col-12" for="lname"><Apellido></label>
+                                    <input
+                                      class="col-12"
+                                      type="text"
+                                      name="lname"
+                                      placeholder="Apellido"
+                                    />
+                                    <label class="col-12" for="phone">Telefono</label>
+                                    <input
+                                      class="col-12"
+                                      type="text"
+                                      name="phone"
+                                      placeholder="Telefono"
+                                    />
+                                    <label class="col-12 col-lg-6" for="address">Domicilio</label>
+                                    <input class="col-12" name="address" placeholder="Direccion" />
+                                  </div>
+                                </fieldset>
+                                <fieldset >
+                                  <div class="Usuario col-12 col-lg-6">
+                                    <h2 class="fs-title">Crea tu Usuario</h2>
+                                    <label class="col-12" for="email">Email</label>
+                                    <input
+                                      class="col-12"
+                                      type="text"
+                                      name="email"
+                                      placeholder="Email"
+                                    />
+                                    <label class="col-12" for="password">Contraseña</label>
+                                    <input
+                                      class="col-12"
+                                      type="password"
+                                      name="pass"
+                                      placeholder="Password"
+                                    />
+                                    <label class="col-12" for="password">Repita Contraseña</label>
+                                    <input
+                                      class="col-12"
+                                      type="password"
+                                      name="cpass"
+                                      placeholder="Confirma Password"
+                                    />
+                                  
+                                </fieldset>
+                               
+                               
+                                    <div class="btEnviar col-2">
+                                      <button class="btn btn-submit" type="submit">Actualizar</button>
+                                    </div>
+                                  
+                                
+                               </form>
                             </div>
 
 
@@ -41,7 +101,7 @@
                               
                             </div>
                         </div>
-                    </div>
+                
                 </div>
             </div>
         </section>

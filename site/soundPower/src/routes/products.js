@@ -12,6 +12,7 @@ router.get('/add', Controller.productsAdd);
 router.post('/add',Controller.productsAdd)
 /* GET/POST Cart page */
 router.get('/cart', Controller.cart)
+router.get('/:id/modify',Controller.modify)
 
 
 module.exports = router;

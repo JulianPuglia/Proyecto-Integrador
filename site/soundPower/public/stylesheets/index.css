@@ -6,7 +6,7 @@
 }
 .productos {
   background-color: #045757;
-  margin-top: 10px;
+  margin-top: 5vh;
   margin-bottom: 10px;
   padding: 10px 0px;
   border: 2px solid #044343;
@@ -48,14 +48,14 @@
 
 @media(min-width:720px){
   .principal .carousel{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 8vh ;
+    margin-bottom: 1vh;
     display: block;
     
   }
   
   .principal .carousel .carousel-inner .carousel-item{
-    height: 50vw; 
+    height: 40vw; 
     width: 100%;
   }
   .principal .carousel .carousel-inner .carousel-item img{

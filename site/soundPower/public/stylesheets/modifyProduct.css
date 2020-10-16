@@ -1,14 +1,17 @@
-
-h1{
+.modifica h1{
     text-align: center;
+    background-color: #045757;
+    color: #e4e4e4;
+    border-radius: 3px;
 }
-.publica{
+.modifica{
     background-color:  #e4e4e4;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    border-radius: 5px;
 
 }
-.publica .formulario{
+.modifica .formulario{
     justify-content: space-around;
 }
  
