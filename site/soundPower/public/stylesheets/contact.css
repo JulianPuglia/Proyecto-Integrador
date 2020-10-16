@@ -1,22 +1,17 @@
 
-h1{
+.reach h1{
     text-align: center;
+    background-color: #044343;
+    color: #e4e4e4;
+    border-radius: 5px;
 }
 
+.reach{
+background-color: #e4e4e4;
+border-radius: 5px;
+margin-top: 8vh;
+margin-bottom: 3vh;
 
-.publica .formulario{
-    justify-content: space-around;
 }
+
  
-.boton{
-    border-radius: 10px;
-    background-color:  #044343;
-    color:white;
-
-
-}
-.btn-primary{
-    margin: 10px;
-    background-color:#044343;
-    color: white;
-}

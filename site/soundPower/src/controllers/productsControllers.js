@@ -49,8 +49,19 @@ module.exports = {
             description:producto.description,
             category:producto.category
 
-        }
-        )
+        })
+      },
+        category : (req,res)=>{
+            let category = req.params.category;
+            let producto = dbProducts.filter(producto => {
+                return producto.category == category
+            })
+            res.render('category', {
+                
+                title: "Categoria "+ category.toUpperCase(),
+                producto:producto,
+                price:producto.price,
+                image:producto.image
+        })
     }
 }
-
