@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const dbusers = require('../data/dbusers');
-const {check, validationResult,body} = require('express-validator')
+const {check, validationResult,body} = require('express-validator');
+const { profile } = require('console');
+const { title } = require('process');
 module.exports = {
     save : (req, res) => {
 
@@ -34,5 +36,10 @@ module.exports = {
     },
     Login :(req,res) => {
         res.render('login')
+    },
+    profile :(req,res) =>{
+        res.render('profile',{
+            title:"perfil del usuario",
+           })
     }
 }

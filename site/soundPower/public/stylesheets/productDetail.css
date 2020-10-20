@@ -19,6 +19,7 @@
   border-top-left-radius: 3px;
   border-color: 3px solid #045757;
   color: #e4e4e4;
+  text-align: center;
 }
 
 .cajadp .detalleP .principal .precio {
@@ -27,6 +28,7 @@
   margin-top: 1vh;
   border-top: 1px solid #044343;
   padding-top: 1vh;
+  
 }
 
 .cajadp .detalleP .specs .specs {
@@ -56,6 +58,7 @@
 .cajadp .detalleP .principal .comprar{
   background-color: #045757;
   color: #e4e4e4;
+  border-radius: 3px;
 }
 
 .cajadp .detalleP .principal .icons {

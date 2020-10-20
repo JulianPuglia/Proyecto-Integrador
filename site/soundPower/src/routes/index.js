@@ -7,3 +7,4 @@ router.get('/', controller.index);
 
 router.get('/faqs',controller.faqs);
 module.exports = router;
+router.get('/contact',controller.contact)

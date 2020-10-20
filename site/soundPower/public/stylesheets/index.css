@@ -1,8 +1,3 @@
-.principal{
-  position: relative;
-  margin-top: 5vh;
-}
-
 .principal h3 {
   text-align: center;
   color: #e4e4e4;
@@ -11,17 +6,21 @@
 }
 .productos {
   background-color: #045757;
-  margin-top: 10px;
+  margin-top: 5vh;
   margin-bottom: 10px;
   padding: 10px 0px;
   border: 2px solid #044343;
   justify-content: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .principal{
   margin-top: 9vh;
 =======
 .carrousel{
+=======
+.carousel{
+>>>>>>> b28a5f916c7078cd3e3629c415ecb9fb3dea9d0b
  display: none
 >>>>>>> master
 }
@@ -57,9 +56,19 @@
 }
 
 @media(min-width:720px){
-  .principal .carrousel{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+  .principal .carousel{
+    margin-top: 8vh ;
+    margin-bottom: 1vh;
     display: block;
+    
+  }
+  
+  .principal .carousel .carousel-inner .carousel-item{
+    height: 40vw; 
+    width: 100%;
+  }
+  .principal .carousel .carousel-inner .carousel-item img{
+ width: 100%;
+ height: auto;
   }
 }
