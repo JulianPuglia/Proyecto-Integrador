@@ -1,83 +1,12 @@
 .login{
     
-<<<<<<< HEAD
-    margin-top: 20vh;
-=======
     margin-top: 2vh;
     margin-bottom: 2vh;
->>>>>>> 5633ffb42e2414e71907bcecb5ffd09b3488e919
 }
 
 
 .login .main-head{
     height: 150px;
-<<<<<<< HEAD
-    background: #FFF;
-   
-}
-
-.login .sidenav {
-    height: 100%;
-    background-color: #045757;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-
-.login .main {
-    padding: 0px 10px;
-}
-
-
-
-@media screen and (max-width: 450px) {
-    .login.login-form{
-        margin-top: 10%;
-    }
-
-    .login .register-form{
-        margin-top: 10%;
-    }
-}
-
-@media screen and (min-width: 768px){
-    .login .main{
-        margin-left: 40%; 
-    }
-
-    .login.sidenav{
-        width: 40%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-    }
-
-    .login.login-form{
-        margin-top: 80%;
-    }
-
-    .login.register-form{
-        margin-top: 20%;
-    }
-}
-
-
-.login.login-main-text{
-    margin-top: 20%;
-    padding: 60px;
-    color: #fff;
-}
-
-.login.login-main-text h2{
-    font-weight: 300;
-}
-
-.login.btn-black{
-    background-color: #000 !important;
-    color: #fff;
-}
-=======
     background: #e4e4e4;
    
 }
@@ -101,4 +30,3 @@
 
 
 
->>>>>>> 5633ffb42e2414e71907bcecb5ffd09b3488e919

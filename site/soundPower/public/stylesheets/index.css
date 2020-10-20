@@ -12,17 +12,15 @@
   border: 2px solid #044343;
   justify-content: center;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .principal{
-  margin-top: 9vh;
-=======
-.carrousel{
-=======
+  margin-top: 4vh;
+}
+
 .carousel{
->>>>>>> b28a5f916c7078cd3e3629c415ecb9fb3dea9d0b
+
  display: none
->>>>>>> master
+
 }
 
 .productos .imagenes {
@@ -57,7 +55,7 @@
 
 @media(min-width:720px){
   .principal .carousel{
-    margin-top: 8vh ;
+    margin-top: 5vh ;
     margin-bottom: 1vh;
     display: block;
     
