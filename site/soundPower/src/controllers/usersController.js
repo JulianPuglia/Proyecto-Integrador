@@ -5,9 +5,12 @@ const dbusers = require('../data/dbusers');
 const {check, validationResult,body} = require('express-validator');
 const { profile } = require('console');
 const { title } = require('process');
+const { userInfo } = require('os');
 module.exports = {
     save : (req, res) => {
 
+      let errors = validationResult(req);
+      if(errors.isEmpty()){
 
         let id = dbusers.length;
         //Crear nuevos usuarios        
@@ -29,13 +32,28 @@ module.exports = {
         res.render('login',{
             title:"login"
         })
-   
+
+    }else{
+        res.render('register',{errors: errors.errors})
+    }
+
     },
     register :(req,res) =>{
         res.render('register')
     },
     Login :(req,res) => {
         res.render('login')
+    },
+    process: (req,res) =>{
+        //dbusers.forEach(usuario =>{
+           // let userLogin={
+                //id: usuario.id,
+                //email: usuario.email,
+                //password: usuario.pass
+            //}
+    //})
+        res.render('login')
+        
     },
     profile :(req,res) =>{
         res.render('profile',{
