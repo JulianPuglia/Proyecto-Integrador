@@ -44,17 +44,20 @@ module.exports = {
     Login :(req,res) => {
         res.render('login')
     },
+
     process: (req,res) =>{
-        //dbusers.forEach(usuario =>{
-           // let userLogin={
-                //id: usuario.id,
-                //email: usuario.email,
-                //password: usuario.pass
-            //}
-    //})
-        res.render('login')
+        //let errors = validationResult(req);
+        //if(errors.isEmpty()){
+        //dbusers.filter(usuario=>{
+      //return usuario.id, usuario.email, usuario.pass
+//})
+//} else {
+    //res.render('login', {errors: errors.errors})
+//}
+        //res.render('login')
         
     },
+
     profile :(req,res) =>{
         res.render('profile',{
             title:"perfil del usuario",
