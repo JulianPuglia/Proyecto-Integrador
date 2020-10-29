@@ -64,6 +64,7 @@
     
 
       <div class="dropdown col-3 col-md-1 col-1">
+        <form action="/search" method="get">
         <button
           class="btn search dropdown-toggle "
           type="button"
@@ -78,10 +79,12 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <input
             type="search"
+            name="search"
             placeholder="Search.."
             id="myInput"
             onkeyup="filterFunction()"
           />
+          </form>
         </div>
       </div>
         <!--Carrito-->
