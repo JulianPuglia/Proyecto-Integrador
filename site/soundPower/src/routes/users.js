@@ -11,7 +11,7 @@ router.post('/register',registerValidator,controller.save);
 //router.post('/register',controller.save)
 
 router.get('/login', controller.Login)
-router.post('login',loginValidator,controller.process)
+router.post('/login',loginValidator,controller.process)
 
 router.get('/profile',controller.profile)
 
