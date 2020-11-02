@@ -63,5 +63,9 @@ module.exports = {
                 price:producto.price,
                 image:producto.image
         })
+    },
+    discount: (req,res) =>{
+        
+        res.render('discount')
     }
 }

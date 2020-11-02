@@ -62,9 +62,10 @@ module.exports = {
             }
             res.locals.user = req.session.user;
             
-            return res.redirect("/")
+            return res.redirect("/users/profile")
         })
-        
+        .catch(error => res.send(error))
+
         //let errors = validationResult(req);
         //if(errors.isEmpty()){
         //dbusers.filter(usuario=>{
