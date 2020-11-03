@@ -55,6 +55,15 @@
   
   
 }
+.registro .radial{
+  background-color: #e4e4e4;
+  color: #045757;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border-radius: 3px;
+  padding: 1vh;
+ 
+}
 .registro .Usuario,
 .registro .Datos {
   display: flex;
