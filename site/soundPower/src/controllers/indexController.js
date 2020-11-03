@@ -21,5 +21,11 @@ module.exports = {
         res.render('contact',{
             title:"Contacto"
         })
+    },
+    search:(req, res) =>{
+        //let buscar = req.query.search
+        //res.render('products',{
+        //title:"Resultado de Busqueda",
+        //buscar:buscar})
     }
 }

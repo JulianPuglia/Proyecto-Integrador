@@ -30,10 +30,10 @@
         <!--barra de menu -->
         <ul class="menu navbar-nav mr-auto">
           <li>
-            <a href="/products ">Productos   </a>
+            <a href="/products ">Productos</a>
           </li>
           <li>
-            <a href="/products">Oportunidades</a>
+            <a href="/discount">Oportunidades</a>
           </li>
           <li>
             <a href="/contact">Contacto</a>
@@ -52,7 +52,7 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Usuario
+          Usuarios
           <i class="far fa-user-circle"></i>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -64,6 +64,7 @@
     
 
       <div class="dropdown col-3 col-md-1 col-1">
+        <form action="/search" method="get">
         <button
           class="btn search dropdown-toggle "
           type="button"
@@ -78,10 +79,12 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <input
             type="search"
-            placeholder="Buscar.."
-            id="searchBar"
+            name="search"
+            placeholder="Search.."
+            id="myInput"
             onkeyup="filterFunction()"
           />
+          </form>
         </div>
       </div>
         <!--Carrito-->

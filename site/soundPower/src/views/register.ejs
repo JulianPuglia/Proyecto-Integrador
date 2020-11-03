@@ -10,7 +10,15 @@
     <div class="registro container">
       <div class="row">
       
-      
+       <% if (typeof errors != 'undefined') { %>
+  
+       <% for( let i = 0; i < errors.length; i++) { %> 
+        <li style="color:red;">
+          <%= errors[i].msg %>
+        </li><br>
+       <% } %> 
+       <% } %> 
+
        <form action="/users/register" method="POST">
         <fieldset >
           <div class="Usuario col-12 col-lg-6">

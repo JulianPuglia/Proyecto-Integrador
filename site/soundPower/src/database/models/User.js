@@ -48,16 +48,17 @@ module.exports = (sequelize, dataTypes) => {
     }
     let config = {
         tableName: "users",
-        timestamps: true,
-        underscored:true
+        timestamps: false,
+        
     }
     const User = sequelize.define(alias,cols,config);
-    /*User.associate = function(models){
-        User.hasOne(models.Stores,{
-            as:"tienda",
-            foreignKey:"id_usuario"
+    User.associate = function(models){
+        User.belongsToMany(models.Products,{
+            as : 'productos', 
+            through : 'cart',//tabla intermedia 
+            foreignKey : 'usuario_id',//la clave foranea de este modelo en esa tabla intermedia
+            otherKey : 'producto_id'//la otra clave foranea del otro modelo en cuestion en esa tabla intermedia
         })
-
-    }*/
+    }
     return User;
 }
