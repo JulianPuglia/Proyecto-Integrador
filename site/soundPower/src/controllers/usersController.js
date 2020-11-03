@@ -13,7 +13,7 @@ let Op = Sequelize.Op;
 
 module.exports = {
 
-    save : (req, res) => {
+    save : (req, res, next) => {
 
       let errors = validationResult(req);
       if(errors.isEmpty()){
@@ -23,6 +23,7 @@ module.exports = {
             apellido : req.body.lname,
             email: req.body.email,
             contraseña:bcrypt.hashSync(req.body.pass, 10),
+            avatar: req.file.filename[0]
         })
         .then(result=>{
 
@@ -65,16 +66,6 @@ module.exports = {
             return res.redirect("/users/profile")
         })
         .catch(error => res.send(error))
-
-        //let errors = validationResult(req);
-        //if(errors.isEmpty()){
-        //dbusers.filter(usuario=>{
-      //return usuario.id, usuario.email, usuario.pass
-//})
-//} else {
-    //res.render('login', {errors: errors.errors})
-//}
-        //res.render('login')
         
     },
 

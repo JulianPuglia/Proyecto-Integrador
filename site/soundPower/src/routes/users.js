@@ -4,7 +4,7 @@ var controller = require('../controllers/usersController.js');
 const {check, validationResult, body} = require('express-validator');
 const loginValidator = require('../validator/loginValidator.js');
 const registerValidator = require('../validator/registerValidator.js');
-const uploadAvatar = require('..middlewares/upAvatar.js')
+const uploadAvatar = require('../middlewares/upAvatar')
 
 /* POST register page */
 router.get('/register', controller.register);
