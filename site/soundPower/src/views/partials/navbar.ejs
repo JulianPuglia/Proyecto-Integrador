@@ -52,7 +52,11 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Usuarios
+        <% if (typeof user != "undefined" && user) { %>
+          <%= user.nick %>
+        <% }else{ %>
+          Usuario
+        <% } %>
           <i class="far fa-user-circle"></i>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

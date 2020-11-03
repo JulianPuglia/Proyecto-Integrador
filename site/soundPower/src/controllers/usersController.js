@@ -63,15 +63,49 @@ module.exports = {
             }
             res.locals.user = req.session.user;
             
-            return res.redirect("/users/profile")
+            return res.render("profile",{
+            title:'Bienvenido ' + req.session.user.nick,
+            userSession: req.session.user,
+            user: user}
+            )
         })
         .catch(error => res.send(error))
         
     },
 
     profile :(req,res) =>{
-        res.render('profile',{
-            title:"perfil del usuario",
-           })
+        db.Users.findByPk(req.session.user.id)
+        .then(User => {
+            res.render('profile',{
+                title:"perfil del usuario",
+                user: User,
+                userSession: req.session.user
+               })
+        })
+        .catch(error => res.send(error))
+    },
+    processProfile : (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+  
+          db.Users.update({
+              nombre :req.body.fname ,
+              apellido : req.body.lname,
+              email: req.body.email,
+              direccion: req.body.address,
+              telefono: req.body.phone,
+              contraseña:bcrypt.hashSync(req.body.pass, 10),
+          })
+          .then(result=>{
+  
+              return res.redirect("/users/profile")
+          })
+          .catch(err=>{
+              console.log(err)
+          })
+  
+          }else{
+              res.render('profile',{errors: errors.errors})
+          }
     }
 }

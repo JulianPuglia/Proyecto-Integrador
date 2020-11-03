@@ -20,18 +20,11 @@
                                     <div class="contenido">
 
 
-                        <ul class="nav nav-tabs " id="myTab" role="tablist">
-                            <li class="nav-item " role="presentation">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#datos" role="tab" aria-controls="home" aria-selected="true">Mis Datos</a>
-                            </li>
-                            <li class="nav-item " role="presentation">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#compras" role="tab" aria-controls="profile" aria-selected="false">Mis Compras</a>
-                            </li>
-                        </ul>
+                           
                         <div class="tab-content" id="myTabContent">
 
                             <div class="tab-pane fade " id="datos" role="tabpanel" aria-labelledby="home-tab">
-                              <form action="/users/register" method="POST">
+                              <form action="/users/profile" method="POST">
                                 <fieldset>
                                   <div class="Datos col-12 col-lg-6">
                                     <h2 class="fs-title">Datos Personales</h2>
@@ -40,24 +33,24 @@
                                       class="col-12"
                                       type="text"
                                       name="fname"
-                                      placeholder="Nombre"
+                                      placeholder="<%= user.nombre %>"
                                     />
                                     <label class="col-12" for="lname"><Apellido></label>
                                     <input
                                       class="col-12"
                                       type="text"
                                       name="lname"
-                                      placeholder="Apellido"
+                                      placeholder = '<%= user.apellido %>' 
                                     />
                                     <label class="col-12" for="phone">Telefono</label>
                                     <input
                                       class="col-12"
                                       type="text"
                                       name="phone"
-                                      placeholder="Telefono"
+                                      placeholder="<%= user.telefono %>"
                                     />
                                     <label class="col-12 col-lg-6" for="address">Domicilio</label>
-                                    <input class="col-12" name="address" placeholder="Direccion" />
+                                    <input class="col-12" name="address" placeholder="<%= user.direccion %>" />
                                   </div>
                                 </fieldset>
                                 <fieldset >
@@ -68,21 +61,21 @@
                                       class="col-12"
                                       type="text"
                                       name="email"
-                                      placeholder="Email"
+                                      placeholder="<%= user.email %>"
                                     />
                                     <label class="col-12" for="password">Contraseña</label>
                                     <input
                                       class="col-12"
                                       type="password"
                                       name="pass"
-                                      placeholder="Password"
+                                      placeholder="<%= user.contraseña %>"
                                     />
                                     <label class="col-12" for="password">Repita Contraseña</label>
                                     <input
                                       class="col-12"
                                       type="password"
                                       name="cpass"
-                                      placeholder="Confirma Password"
+                                      placeholder="<%= user.contraseña %>"
                                     />
                                   
                                 </fieldset>
