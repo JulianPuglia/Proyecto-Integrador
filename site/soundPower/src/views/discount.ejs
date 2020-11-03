@@ -11,16 +11,17 @@
     <div class="row products">
         <div class="col-12">
               <h2>
-              Descuentos
+              <%= title %>
               </h2>
           <div class="filas">
+
                         <% producto.forEach(producto => { %>
 
                                     
                              <article>
                                <figure>
-                                   <a href="./products/details/<%= producto.id %> "><img src="/images/products/<%- producto.image %>  " alt=" "></a>
-                                   <h5> <i style="font-size:24px" class="fa">&#xf101;</i><%- producto.name %></h5>        
+                                  <img src="/images/products/<%- producto.image %>  " alt=" ">
+                                    <a href="./products/details/<%= producto.id %> "><h5> <i style="font-size:24px" class="fa">&#xf101;</i><%- producto.name %></h5>       
                                </a>
                                     </figure>
                                     

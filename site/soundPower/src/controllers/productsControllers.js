@@ -65,7 +65,11 @@ module.exports = {
         })
     },
     discount: (req,res) =>{
-        
-        res.render('discount')
+
+        res.render('discount',{
+        title:"Descuentos",
+        producto:dbProducts,   
+        },
+        )
     }
 }
