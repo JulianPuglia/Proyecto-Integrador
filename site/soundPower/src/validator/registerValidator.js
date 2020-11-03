@@ -7,6 +7,6 @@ module.exports=[
     check('cpass').isLength({min:8}).withMessage('Debes ingresar una contraseña'),
     check('fname').isLength().withMessage('Debes ingresar un nombre'),
     check('lname').isLength().withMessage('Debes ingresar un apellido'),
-    check('phone').isInt({min:0}).withMessage('Debes llenar este campo'),
-    check('address').isLength().withMessage('Debes llenar este campo')
+    //check('phone').isInt({min:0}).withMessage('Debes llenar este campo'),
+    //check('address').isLength().withMessage('Debes llenar este campo')
 ]

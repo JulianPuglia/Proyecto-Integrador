@@ -4,11 +4,14 @@ const path = require('path');
 
 module.exports = {
     products : (req, res) => {
+
         res.render('products',{
+            
             title:"Productos",
             producto: dbProducts,
             
         })
+
     },
     productsDetails : (req, res) => {
         let id = req.params.id;
