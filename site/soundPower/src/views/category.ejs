@@ -16,14 +16,14 @@
           
                         <% producto.forEach(producto => { %>
 
-                                    
+                            <article>     
 
                                <figure>
                                    <a href="./products/details/<%= producto.id %> "><img src="/images/products/<%- producto.image %>  " alt=" ">
                                             <%- producto.name %>
                                </a>
                                     </figure>
-                                    <article>
+                                 
                                     
                                                 <p> 
                                                     <%- producto.description %>
