@@ -9,4 +9,5 @@ module.exports=[
     check('lname').isLength().withMessage('Debes ingresar un apellido'),
     check('phone').isInt({min:0}).withMessage('Debe llenar el campo telefono'),
     check('address').isLength().withMessage('Debe llenar el campo direccion')
+   
 ]
