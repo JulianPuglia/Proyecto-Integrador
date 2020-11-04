@@ -13,7 +13,7 @@ body {
   }
   
   .navbar-expand-md{
-    display: flex;
+   
     justify-content: space-around;
     width: 100vw;
     background-color: #e4e4e4;
