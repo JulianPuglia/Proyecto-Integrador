@@ -56,7 +56,7 @@ module.exports = {
             let producto = dbProducts.filter(producto => {
                 return producto.category == category
             })
-            res.render('category', {
+            res.render('products', {
                 
                 title: "Categoria "+ category.toUpperCase(),
                 producto:producto,

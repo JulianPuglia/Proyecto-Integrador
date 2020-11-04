@@ -1,5 +1,5 @@
 .perfilUsuario {
-    margin: 5vh 0;
+    margin: 8vh 0;
 }
 
 .perfilUsuario .titulo{
@@ -8,6 +8,7 @@ border-radius: 5px;
 }
 .perfilUsuario .contenido {
     background-color: #045757;
+
     color: #e4e4e4;
 }
 
