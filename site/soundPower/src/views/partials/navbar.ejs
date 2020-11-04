@@ -33,7 +33,7 @@
             <a href="/products ">Productos</a>
           </li>
           <li>
-            <a href="/discount">Oportunidades</a>
+            <a href="/products/oportunidad/discount">Oportunidades</a>
           </li>
           <li>
             <a href="/contact">Contacto</a>
@@ -67,9 +67,12 @@
             <a class="dropdown-item" href="/users/login">Ingresa</a>
             <a class="dropdown-item" href="/users/register">Registrate</a>
           <% } %>
-        
-        </div>
+         </div>
       </div>
+      <% if (typeof user != "undefined" && user) { %>
+        <a class="salida" href="/users/logout">SALIR</a>
+           
+      <% } %>
       <!--busqueda-->
     
 

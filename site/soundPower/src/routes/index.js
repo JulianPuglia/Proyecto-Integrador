@@ -8,6 +8,7 @@ router.get('/', controller.index);
 router.get('/faqs',controller.faqs);
 
 router.get('/contact',controller.contact);
+router.post('/contact',controller.submit)
 
 router.get('/search',controller.search);
 

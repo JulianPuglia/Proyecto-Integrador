@@ -22,6 +22,9 @@ module.exports = {
             title:"Contacto"
         })
     },
+    submit :(req,res)=>{
+
+    },
     search:(req, res) =>{
         //let buscar = req.query.search
         //res.render('products',{
