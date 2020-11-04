@@ -50,6 +50,9 @@ module.exports = {
     },
 
     process: (req,res) =>{
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+  
         db.Users.findOne({
             where:{
                 email:req.body.email
@@ -70,7 +73,9 @@ module.exports = {
             )
         })
         .catch(error => res.send(error))
-        
+    } else{
+        res.render('login',{errors: errors.errors})
+    }
     },
 
     profile :(req,res) =>{
