@@ -48,6 +48,10 @@ module.exports = {
             title:'Ingresá a tu cuenta',
         })
     },
+    logout:function(req,res){
+        req.session.destroy(); //elimino la sesion
+        
+        return res.redirect('/')},
 
     process: (req,res) =>{
         let errors = validationResult(req);
