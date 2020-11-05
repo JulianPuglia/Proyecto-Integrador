@@ -1,4 +1,3 @@
-const dbusers = require('../data/dbusers');
 const {check, validationResult,body} = require('express-validator');
 
 module.exports=[
