@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
-const dbusers = require('../data/dbusers');
 const {check, validationResult,body} = require('express-validator');
 const { profile } = require('console');
 const { title } = require('process');
@@ -9,6 +8,7 @@ const { userInfo } = require('os');
 
 const db = require('../database/models');
 const Sequelize = require('sequelize');
+const dbusers = require('../data/dbusers');
 let Op = Sequelize.Op;
 
 module.exports = {
@@ -31,26 +31,6 @@ module.exports = {
         .catch(err=>{
             console.log(err)
         })
-        // let id = dbusers.length;
-        // //Crear nuevos usuarios        
-        // let newUser ={
-        //     id: id +1,
-        //     email: req.body.email,
-        //     password:bcrypt.hashSync(req.body.pass, 10),
-        //     confirmpassword:bcrypt.hashSync(req.body.cpass,10),
-        //     name: req.body.fname,
-        //     lastName: req.body.lname,
-        //     phone: req.body.phone,
-        //     address: req.body.address
-             
-        // }
-        
-        // dbusers.push(newUser);
-        // fs.writeFileSync(path.join(__dirname,'..', 'data', 'users.json'),JSON.stringify(dbusers),'utf-8')
-        
-        // res.render('login',{
-        //     title:"login"
-        // })
 
         }else{
             res.render('register',{errors: errors.errors})
@@ -63,7 +43,9 @@ module.exports = {
     },
 
     Login :(req,res) => {
-        res.render('login')
+        res.render('login',{
+            title:'Ingresá a tu cuenta',
+        })
     },
 
     process: (req,res) =>{
@@ -73,12 +55,17 @@ module.exports = {
             }
         })
         .then(user => {
+            req.session.user = {
+                id: user.id,
+                nick: user.nombre + ' ' + user.apellido,
+                email: user.email,
+            }
+            res.locals.user = req.session.user;
             
-            
-
-            return redirect("")
+            return res.redirect("/users/profile")
         })
-        
+        .catch(error => res.send(error))
+
         //let errors = validationResult(req);
         //if(errors.isEmpty()){
         //dbusers.filter(usuario=>{

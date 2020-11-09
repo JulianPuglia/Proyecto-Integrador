@@ -6,7 +6,7 @@
         "image":"guitarra-azul-fender.jpeg",
         "category":"Cuerdas",
         "colors":"Azul",
-        "price":"27.000"
+        "price":"$27.000"
     },
     {
         "id":2,
@@ -15,7 +15,7 @@
         "image":"amplificador-fender.jpeg",
         "category":"Tecnica",
         "colors":"Marron",
-        "price":"23.000"
+        "price":"$23.000"
     },
     {
         "id":3,
@@ -24,7 +24,7 @@
         "image":"amplificador-marshall.jpg",
         "category":"Tecnica",
         "colors":"negro",
-        "price":"25.000"
+        "price":"$25.000"
     },
     {
         "id":4,
@@ -33,7 +33,7 @@
         "image":"bajo-fender.jpeg",
         "category":"Cuerdas",
         "colors":"Bordo",
-        "price":"32.000"
+        "price":"$32.000"
     },
     {
         "id":5,
@@ -42,7 +42,7 @@
         "image":"bateria2-yamaha.jpeg",
         "category":"Baterias",
         "colors":"Bordo",
-        "price":"19.000"
+        "price":"$19.000"
     },
     {
         "id":6,
@@ -51,7 +51,7 @@
         "image":"guitarra-acustica-fender.jpeg",
         "category":"Cuerdas",
         "colors":"Marron",
-        "price":"20.000"
+        "price":"$20.000"
     },
 
     {
@@ -61,7 +61,7 @@
         "image":"guitarra-negra.png",
         "category":"Cuerdas",
         "colors":"negro",
-        "price":"18.000"
+        "price":"$18.000"
     },
     {
         "id":8,
@@ -70,7 +70,7 @@
         "image":"microfono.jpeg",
         "category":"Tecnica",
         "colors":"negro",
-        "price":"8.000"
+        "price":"$8.000"
     },  {
         "id":9,
         "name": "Microfono",
@@ -78,7 +78,7 @@
         "image":"microfono-3.jpeg",
         "category":"Tecnica",
         "colors":"negro",
-        "price":"11.000"
+        "price":"$11.000"
     },
     {
         "id":10,
@@ -87,7 +87,7 @@
         "image":"piano-casio.jpeg",
         "category":"Teclados",
         "colors":"negro",
-        "price":"120.000"
+        "price":"$120.000"
     },
     {
         "id":11,
@@ -96,7 +96,7 @@
         "image":"teclado-technics.jpeg",
         "category":"Teclados",
         "colors":"gris",
-        "price":"34.000"
+        "price":"$34.000"
     },
     {
         "id":12,
@@ -105,7 +105,7 @@
         "image":"teclado-yamaha.jpeg",
         "category":"Teclados",
         "colors":"negro",
-        "price":"36.000"
+        "price":"$36.000"
     },
     {
         "id":13,
@@ -114,6 +114,6 @@
         "image":"trompeta.jpeg",
         "category":"otros",
         "colors":"plateado",
-        "price":"45.000"
+        "price":"$45.000"
     }
 ]

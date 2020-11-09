@@ -6,5 +6,9 @@ let controller = require ('../controllers/indexController');
 router.get('/', controller.index);
 
 router.get('/faqs',controller.faqs);
+
+router.get('/contact',controller.contact);
+
+router.get('/search',controller.search);
+
 module.exports = router;
-router.get('/contact',controller.contact)
