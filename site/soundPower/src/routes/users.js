@@ -4,11 +4,11 @@ var controller = require('../controllers/usersController.js');
 const {check, validationResult, body} = require('express-validator');
 const loginValidator = require('../validator/loginValidator.js');
 const registerValidator = require('../validator/registerValidator.js');
-const uploadAvatar = require('../middlewares/upAvatar')
+const upAvatar = require('../middlewares/upAvatar')
 
 /* POST register page */
 router.get('/register', controller.register);
-router.post('/register',registerValidator,uploadAvatar.any(),controller.save);
+router.post('/register',registerValidator,upAvatar.any(),controller.save);
 //router.post('/register',controller.save)
 
 router.get('/login', controller.Login)

@@ -23,7 +23,7 @@ module.exports = {
             apellido : req.body.lname,
             email: req.body.email,
             contraseña:bcrypt.hashSync(req.body.pass, 10),
-            avatar: req.file.filename[0]
+            avatar: req.file[0].filename
         })
         .then(result=>{
 

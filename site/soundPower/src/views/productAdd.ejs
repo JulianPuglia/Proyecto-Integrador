@@ -10,7 +10,7 @@
 <div class="row"> 
  <div class="formulario col-12 col-md-6 col-lg-6">
        <!--FORMULARIO-->
-  <form action="/products/add" method="POST">
+  <form action="/products/add" method="POST" enctype="multipart/form-data">
 
      <h2>INCLUYE ALGUNOS DETALLES</h2> <br>
 
@@ -28,7 +28,7 @@
       <div class="anuncio ">
         
               <label for="titulo de anuncio"> Título de anuncio *</label> 
-        <input type="text" class="titulo de anuncio col-12 col-md-12 col-lg-6" id="titulo de anuncio" placeholder="titulo">
+        <input type="text" class="titulo de anuncio col-12 col-md-12 col-lg-6" id="titulo de anuncio" name="titulo" placeholder="titulo">
       </div>
       <div class="descripccion ">
          <label>Descripción *</label> <br>
@@ -55,7 +55,7 @@
                     <path fill-rule="evenodd" d="M4.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
                   </svg>
             <label for="exampleFormControlFile1">Seleccione una imagen</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              <input type="file" name="imagen" class="form-control-file" id="exampleFormControlFile1">
               
             </div>
           </div>

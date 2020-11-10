@@ -2,6 +2,10 @@ const dbProducts = require('../data/database') //requiero la base de datos de pr
 const fs = require('fs');
 const path = require('path');
 
+const sequelize = require('sequelize');
+const db  = require('../database/models');
+const { Result } = require('express-validator');
+
 module.exports = {
     products : (req, res) => {
         res.render('products',{
@@ -28,6 +32,22 @@ module.exports = {
     productsAdd : (req, res) => {
         res.render('productAdd',{
             title:"Agregar Productos"
+        })
+    },
+    publicar: (req, res, next) =>{
+
+        db.Products.create({
+            
+        nombre: req.body.titulo,
+        descripcion: req.body.descripcion,
+        precio: req.body.precio,
+        //imagen:req.file[0].filename
+        })
+        .then(Result =>{
+            return res.redirect('/products/productsAdd')
+        })
+        res.render('productAdd',{
+            title:"Publicar"
         })
     },
     cart : (req, res) => {
