@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 //const dbusers = require('../data/dbusers');
 const db = require('../database/models');
+=======
+>>>>>>> bfa9e5e37c379b3d23fd2d9231355bd2ae64500c
 const {check, validationResult,body} = require('express-validator');
 
 module.exports=[
