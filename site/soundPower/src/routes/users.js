@@ -9,7 +9,7 @@ var urlencodedParser = express.urlencoded({extended: false});
 
 /* register page */
 router.get('/register', controller.register);
-router.post('/register',urlencodedParser,upAvatar.any(),registerValidator,controller.processRegister);
+router.post('/register',urlencodedParser,upAvatar.any(),registerValidator,controller.save);
 
 //router.post('/register',controller.save)
 

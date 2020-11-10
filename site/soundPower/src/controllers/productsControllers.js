@@ -92,11 +92,25 @@ module.exports = {
                 image:producto.image
         })
     },
-    search:(req, res) =>{
-        //let buscar = req.query.search
-        //res.render('products',{
-        //title:"Resultado de Busqueda",
-        //buscar:buscar})
+    search: function(req, res) {
+  
+        let errors = validationResult(req); //devuelve los errores del formSearch
+        
+        if(errors.isEmpty()){ //si no hay errores, es decir que la consulta no venga vacía
+        let buscar = req.query.search;
+        let productos = [];
+        db.Product.forEach(producto => {
+            if (producto.nombre.toLowerCase().includes(buscar)) {
+                productos.push(producto)
+            }
+        })
+        res.render('products', {
+            title: "Resultado de la búsqueda",
+            products: productos,
+     
+        })
+    }else{
+        return res.redirect('/')
     }
-   
+    }
 }

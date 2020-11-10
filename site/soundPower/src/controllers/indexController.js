@@ -1,4 +1,4 @@
-const { products } = require("./productsControllers")
+
 let dbProduct = require('../data/database')
 const dbFaqs = require('../data/faqs') //requiero la base de datos de productos
 const fs = require('fs');
@@ -28,7 +28,7 @@ module.exports = {
         })
     },
     aboutUs:(req,res)=>{
-        res.render('abotus',{
+        res.render('aboutus',{
             title:"Quienes somos"
         })
     }
