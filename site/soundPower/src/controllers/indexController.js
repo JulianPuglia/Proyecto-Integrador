@@ -27,10 +27,10 @@ module.exports = {
             title:"Contacto"
         })
     },
-    search:(req, res) =>{
-        //let buscar = req.query.search
-        //res.render('products',{
-        //title:"Resultado de Busqueda",
-        //buscar:buscar})
+    aboutUs:(req,res)=>{
+        res.render('abotus',{
+            title:"Quienes somos"
+        })
     }
+  
 }

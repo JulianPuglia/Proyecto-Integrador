@@ -91,6 +91,12 @@ module.exports = {
                 price:producto.price,
                 image:producto.image
         })
+    },
+    search:(req, res) =>{
+        //let buscar = req.query.search
+        //res.render('products',{
+        //title:"Resultado de Busqueda",
+        //buscar:buscar})
     }
    
 }
