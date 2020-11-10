@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+//const dbusers = require('../data/dbusers');
+const db = require('../database/models');
+=======
+>>>>>>> bfa9e5e37c379b3d23fd2d9231355bd2ae64500c
 const {check, validationResult,body} = require('express-validator');
 
 module.exports=[
@@ -8,5 +13,4 @@ module.exports=[
     check('lname').isLength().withMessage('Debes ingresar un apellido'),
     check('phone').isInt({min:0}).withMessage('Debe llenar el campo telefono'),
     check('address').isLength().withMessage('Debe llenar el campo direccion')
-   
-]
+     ]

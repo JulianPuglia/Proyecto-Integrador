@@ -12,6 +12,26 @@ module.exports = {
         res.render("register");
     },
 
+<<<<<<< HEAD
+    save : (req, res, next) => {
+
+      let errors = validationResult(req);
+      if(errors.isEmpty()){
+
+        db.Users.create({
+            nombre :req.body.fname ,
+            apellido : req.body.lname,
+            email: req.body.email,
+            contraseña:bcrypt.hashSync(req.body.pass, 10),
+            avatar: req.file[0].filename
+        })
+        .then(result=>{
+
+            return res.redirect("/users/login")
+        })
+        .catch(err=>{
+            console.log(err)
+=======
   processRegister: (req, res, next) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
@@ -24,6 +44,7 @@ module.exports = {
       })
         .then((result) => {
           return res.redirect("/users/login");
+>>>>>>> bfa9e5e37c379b3d23fd2d9231355bd2ae64500c
         })
         .catch((err) => {
           console.log(err);
