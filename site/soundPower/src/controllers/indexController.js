@@ -1,5 +1,9 @@
 const { products } = require("./productsControllers")
 let dbProduct = require('../data/database')
+const dbFaqs = require('../data/faqs') //requiero la base de datos de productos
+const fs = require('fs');
+const path = require('path');
+
 
 module.exports = {
     index : (req, res) => {
@@ -14,7 +18,8 @@ module.exports = {
     },
     faqs : (req, res) => {
         res.render('faqs',{
-            title:"Preguntas Frecuentes"
+            title:"Preguntas Frecuentes",
+            faqs:dbFaqs
         })
     },
     contact : (req, res) => {

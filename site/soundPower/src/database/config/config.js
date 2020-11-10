@@ -1,15 +1,16 @@
-{
+module.exports = {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "root",
     "database": "sound_power v1",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "root": 3306
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "sound_power v1",
+    "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -21,3 +22,4 @@
     "dialect": "mysql"
   }
 }
+

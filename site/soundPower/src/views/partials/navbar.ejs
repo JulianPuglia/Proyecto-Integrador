@@ -33,17 +33,17 @@
             <a href="/products ">Productos</a>
           </li>
           <li>
-            <a href="/discount">Oportunidades</a>
+            <a href="/products/oportunidad/discount">Oportunidades</a>
           </li>
           <li>
             <a href="/contact">Contacto</a>
           </li>
         </ul>
       </div>
-      <!--barra de menu: login, Busqueda y Carrito-->
+      <!--barra de menu: login, Busqueda--> 
         <!--User-->
 
-      <div class="dropdown col-5 col-md-2 col-lg-2">
+      <div class="dropdown col-6 col-md-2 col-lg-2">
         <button
           class="btn  dropdown-toggle"
           type="button"
@@ -52,46 +52,66 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Usuarios
-          <i class="far fa-user-circle"></i>
+        <% if (typeof user != "undefined" && user) { %>
+          <%= user.nick %> 
+        <% }else{ %>
+          Usuario  <i class="far fa-user-circle"></i>
+        <% } %>
+          
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="/users/login/">Ingresa</a>
-          <a class="dropdown-item" href="/users/register">Registrate</a>
+          <% if (typeof user != "undefined" && user) { %>
+            <a class="dropdown-item" href="/users/profile">Perfil</a>
+            <a class="dropdown-item" href= "/products/cart">Carrito</a>
+          <% }else{ %>
+            <a class="dropdown-item" href="/users/login">Ingresa</a>
+            <a class="dropdown-item" href="/users/register">Registrate</a>
+          <% } %>
+         </div>
         </div>
-      </div>
-      <!--busqueda-->
+        <div class="salida" >
+        <% if (typeof user != "undefined" && user) { %>
+        <a href="/users/logout">SALIR</a>
+           
+         <% } %>
+        </div>
+       <!--busqueda-->
     
 
-      <div class="dropdown col-3 col-md-1 col-1">
-        <form action="/search" method="get">
-        <button
-          class="btn search dropdown-toggle "
-          type="button"
-          id="dropdownMenuButton"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-        <i class="fas fa-search"></i>
+       <div class="dropdown col-2 col-md-1 col-1">
+      <div class="dropdown hierarchy-select" id="example">
+                  <button
+                    type="button"
+                    class="btn dropdown-toggle"
+                    id="example-two-button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  ><i class="fas fa-search"></i></button>
+                  <div
+                    class="dropdown-menu"
+                   
+                  >
+                    <div class="searchbox">
+                      <input
+                        type="text"
+                        class="form-control"
+                        autocomplete="on"
+                        placeholder="Búsqueda"
+                      />
+                    </div>
+                  </div>
+                  <input
+                    class="d-none"
+                    name="example_two"
+                    readonly="readonly"
+                    aria-hidden="true"
+                    type="text"
+                  />
+                </div>
         
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <input
-            type="search"
-            name="search"
-            placeholder="Search.."
-            id="myInput"
-            onkeyup="filterFunction()"
-          />
-          </form>
-        </div>
       </div>
-        <!--Carrito-->
-      <div class="cart col-2 col-md-2 col-lg-1">
-        <a href=" /products/cart" class="my-auto"> <i class="carrito fas fa-shopping-cart"></i></a>
-        
-      </div>
+    
   
       <!--finaliza caja contenedora del menu-->
     </nav>

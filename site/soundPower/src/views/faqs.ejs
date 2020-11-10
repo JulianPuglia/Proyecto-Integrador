@@ -8,25 +8,26 @@
     <!--PREGUNTAS FRECUENTES-->
  <div  class="container faqs" >
  <div class="row">
-  <h1 class="col-12">Preguntas Frecuentes</h1>
+  <h1 class="col-12"><%=title%></h1>
  <div class="col-12">
   <section >
-  <h4>¿Cómo comprar?</h4>
-  <p>1.Seleccioná los productos que quieras y agregalos al carrito.</p>
-  <p>2.Procesamos tu compra en nuestra tienda utilizando la tecnología de Mercado Libre. Te llevaremos para que realices el pago de forma ágil y segura a través de pagos con débito, crédito y efectivo.</p>
-  <p>3.Elegí la forma de entrega que prefieras ¡y listo!</p>
-</section>
- <section>
-  <h4>¿Puedo pagar en cuotas?</h4> 
-  <p> Podrás ver en la página del producto si se puede pagar en cuotas y con qué medios. Si decidís comprarlo, antes de pagar podrás elegir la cantidad de cuotas y te informaremos el valor de cada una.</p>
- </section>
- <section>
-   <h4>¿Cómo puedo realizar cambios y devoluciones?</h4>
-   <p>Los cambios y devoluciones se hacen de lunes a viernes en nuestra tienda online y física. Te enviaremos un email con una etiqueta de envío para que imprimas y pegues en el paquete para llevarlo al correo ¡y listo!</p>
- </section>
- <section>
-   <h4>¿Hacen envíos a domicilio?</h4>
-   <p>Si, realizamos envíos a domicilio por Correo Argentino, Andreani y Via Cargo.</p>
+    <% faqs.forEach(faq => { %>
+                                   
+      <article>
+        <figure>
+   
+        
+            <h5>¿<%- faq.q %>?</h5>
+             <%- faq.a %>
+
+
+            </figure>
+            
+             </article>
+         
+
+     <% }) %> 
+ </div>
  </section>
 </div>
 </div>
@@ -36,3 +37,7 @@
     <%- include("partials/footer") %>
   </body>
 </html>
+
+
+
+

@@ -18,7 +18,7 @@ router.get('/:id/modify',Controller.modify)
 //router.post('/modify', Controller.save)
 router.get('/:category',Controller.category)
 
-router.get('/discount',Controller.discount)
+router.get('/oportunidad/discount',Controller.discount)
 
 
 module.exports = router;

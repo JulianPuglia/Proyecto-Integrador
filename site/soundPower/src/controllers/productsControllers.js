@@ -54,21 +54,26 @@ module.exports = {
 
         })
       },
-        category : (req,res)=>{
+    discount: (req,res) =>{
+
+        res.render('products',{
+        title:"OPORTUNIDADES",
+        producto:dbProducts,   
+        }
+        )
+      },
+    category : (req,res)=>{
             let category = req.params.category;
             let producto = dbProducts.filter(producto => {
                 return producto.category == category
             })
-            res.render('category', {
+            res.render('products', {
                 
                 title: "Categoria "+ category.toUpperCase(),
                 producto:producto,
                 price:producto.price,
                 image:producto.image
         })
-    },
-    discount: (req,res) =>{
-        
-        res.render('discount')
     }
+   
 }
