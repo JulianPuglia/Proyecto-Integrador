@@ -8,7 +8,7 @@ const uploadAvatar = require('../middlewares/upAvatar')
 
 /* POST register page */
 router.get('/register', controller.register);
-router.post('/register',registerValidator,uploadAvatar.any(),controller.processRegister);
+router.post('/register',uploadAvatar.any(), registerValidator,controller.processRegister);
 //router.post('/register',controller.save)
 
 router.get('/login', controller.Login)
