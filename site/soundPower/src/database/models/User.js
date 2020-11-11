@@ -44,6 +44,10 @@ module.exports = (sequelize, dataTypes) => {
         
         avatar:{
             type:dataTypes.STRING(100)
+        },
+        rol:{
+            type:dataTypes.STRING(20),
+            allowNull:false
         }
     }
     let config = {

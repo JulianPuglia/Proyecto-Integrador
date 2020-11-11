@@ -1,7 +1,7 @@
 const dbProducts = require('../data/database') //requiero la base de datos de productos
 const fs = require('fs');
 const path = require('path');
-
+const {check,validationResult,body} = require('express-validator');
 const sequelize = require('sequelize');
 const db  = require('../database/models');
 const { Result } = require('express-validator');
@@ -94,19 +94,19 @@ module.exports = {
     },
     search: function(req, res) {
   
-        let errors = validationResult(req); //devuelve los errores del formSearch
+        let errors = validationResult(req); 
         
-        if(errors.isEmpty()){ //si no hay errores, es decir que la consulta no venga vacía
-        let buscar = req.query.search;
-        let productos = [];
-        db.Product.forEach(producto => {
-            if (producto.nombre.toLowerCase().includes(buscar)) {
-                productos.push(producto)
-            }
-        })
+        if(errors.isEmpty()){ 
+            let buscar = req.query.search;
+            let productos = [];
+            dbProducts.forEach(producto => {
+                if (producto.name.toLowerCase().includes(buscar)) {
+                    productos.push(producto)
+                }
+            })
         res.render('products', {
             title: "Resultado de la búsqueda",
-            products: productos,
+            producto: productos,
      
         })
     }else{

@@ -6,8 +6,9 @@
    <%- include("partials/social") %>
   
     <div class="publica container">
-      <h1>INSTRUMENTO</h1><br>
-<div class="row"> 
+      <div class="row">
+        <h1 class="col-12"><%=title%></h1>
+       
  <div class="formulario col-12 col-md-6 col-lg-6">
        <!--FORMULARIO-->
   <form action="/products/add" method="POST" enctype="multipart/form-data">
@@ -19,28 +20,35 @@
     <label for=""> Tipo de instrumento *</label> <br>
       <select class="seleccion-de-instrumento col-12 col-md-12 col-lg-6">
        <option selected>seleccioná tu instrumento</option>
-       <option value="guitarras-bajos">Guitarras/Bajos</option>
-       <option value="teclados-pianos">Teclados/Pianos</option>
-       <option value="amplificadores-microfonos">Amplificadores/microfonos</option>
+       <option value="cuerdass">Guitarras/Bajos</option>
+       <option value="teclados">Teclados/Pianos</option>
+       <option value="tecnica">Amplificadores/microfonos</option>
        <option value="accesorios">Accesorios</option>
       </select> <br>
   </div>
       <div class="anuncio ">
         
               <label for="titulo de anuncio"> Título de anuncio *</label> 
-        <input type="text" class="titulo de anuncio col-12 col-md-12 col-lg-6" id="titulo de anuncio" name="titulo" placeholder="titulo">
+        <input type="text" class="titulo de anuncio col-12 col-md-12 col-lg-6" id="titulo de anuncio" name="titulo" placeholder="Ej: Guitarra Feder Stratocaster">
       </div>
       <div class="descripccion ">
          <label>Descripción *</label> <br>
         <textarea class="col-12 col-md-12 col-lg-6" name="descripcion" rows="6" ></textarea> 
         </div>
     </div>
-       <div class="col-sm-12 col-md-6 col-lg-6">
+       <div class="col-sm-12 col-md-6">
           <div class="precio">
             <h2>FIJA UN PRECIO</h2> <br>
-             <button  class="boton" type="button">ARS</button>
-             <button  class="boton" type="button">USD</button>
-              <input type="text" name="precio" id="precio"><br>
+            <div class="row">
+              <input type="text" class="col-sm-12 col-md-6" name="precio" id="precio" placeholder="Escriba el precio"><br>
+            </div>
+            <br>
+            <div>
+              <input type="radio" class="col-3" id="moneda" value="ARS">ARS 
+              <input type="radio" class="col-3" id="moneda" value="US$">US$
+              
+            </div>
+              
               
        </div>
 
