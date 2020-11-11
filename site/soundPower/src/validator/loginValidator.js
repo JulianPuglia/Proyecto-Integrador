@@ -1,6 +1,7 @@
 //const dbusers = require('../data/dbusers');
 const {check, validationResult,body} = require('express-validator');
 const db = require('../database/models');
+const bcrypt = require("bcrypt");
 
 module.exports= [
     check('email').isEmail().withMessage('email invalido'),

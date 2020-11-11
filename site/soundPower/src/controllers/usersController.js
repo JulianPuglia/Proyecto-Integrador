@@ -16,13 +16,13 @@ module.exports = {
 
       let errors = validationResult(req);
       if(errors.isEmpty()){
-
         db.Users.create({
             nombre :req.body.fname ,
             apellido : req.body.lname,
             email: req.body.email,
-            contraseña:bcrypt.hashSync(req.body.pass, 10),
-            avatar: req.file[0].filename
+            password:bcrypt.hashSync(req.body.pass, 10),
+            avatar: req.avatar,
+            rol:"user"
         })
         .then(result=>{
 
@@ -35,7 +35,7 @@ module.exports = {
           console.log(err);
         });
     } else {
-      res.render("register", { errors: errors.errors });
+      res.render("register", { errors: errors.errors, old:req.body });
     }
   },
 
