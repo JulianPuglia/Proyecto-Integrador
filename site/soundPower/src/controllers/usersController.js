@@ -15,23 +15,36 @@ module.exports = {
   processRegister: (req, res) => {
     
     let errors = validationResult(req);
+    
     if (errors.isEmpty()) {
-      db.Users.create({
-        nombre: req.body.fname,
-        apellido: req.body.lname,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.pass, 10),
-        avatar: req.avatar,
-      })
+
+        db.Users.create({
+          nombre: req.body.fname,
+          apellido: req.body.lname,
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.pass, 10),
+          avatar: req.avatar,
+          rol:"user"
+
+        })
         .then((result) => {
+
           return res.redirect("/users/login");
+
         })
         .catch((err) => {
-          console.log(err);
+
+          console.log( errors.errors )
+          res.render("register", { errors: errors.errors ,old:req.body});
+
         });
     } else {
-      res.render("register", { errors: errors.errors });
+
+      console.log( errors.errors )
+      res.render("register", { errors: errors.errors ,old:req.body});
+
     }
+
   },
 
   Login: (req, res) => {

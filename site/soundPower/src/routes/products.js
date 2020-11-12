@@ -16,9 +16,9 @@ router.get('/cart', Controller.cart)
 
 router.get('/:id/modify',Controller.modify)
 //router.post('/modify', Controller.save)
-router.get('/:category',Controller.category)
+router.get('/categories/:category/',Controller.category)
 
-router.get('/oportunidad/discount',Controller.discount)
-
+router.get('/discount',Controller.discount)
+router.get('/search',Controller.search)
 
 module.exports = router;

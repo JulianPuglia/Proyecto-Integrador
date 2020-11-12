@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `sound_power v1`.`users` (
   `direccion` VARCHAR(100) NULL,
   `localidad` VARCHAR(100) NULL,
   `avatar` VARCHAR(100) NULL,
+  `rol` VARCHAR(100) NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idUsers_UNIQUE` (`id` ASC),
   UNIQUE INDEX `contraseña_UNIQUE` (`contraseña` ASC))

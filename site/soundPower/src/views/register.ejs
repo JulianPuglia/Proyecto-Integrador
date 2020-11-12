@@ -19,7 +19,7 @@
        <% } %> 
        <% } %> 
 
-       <form action="/users/register" method="POST" >
+       <form action="/users/register" method="POST" enctype="multipart/form-data">
         <fieldset >
           <div class="Usuario col-12 col-lg-6">
             <h2 class="fs-title">Crea tu Usuario</h2>
@@ -79,6 +79,7 @@
           <div class="row">
           <input type="radio" class="col-4" name="rol" value="guest" checked>Usuario 
           <input type="radio" class="col-4" name="rol" value="admin">Administrador
+          
         </div>
       </div>
             <div class="btEnviar col-1">

@@ -1,4 +1,4 @@
-const { products } = require("./productsControllers")
+
 let dbProduct = require('../data/database')
 const dbFaqs = require('../data/faqs') //requiero la base de datos de productos
 const fs = require('fs');
@@ -27,10 +27,10 @@ module.exports = {
             title:"Contacto"
         })
     },
-    search:(req, res) =>{
-        //let buscar = req.query.search
-        //res.render('products',{
-        //title:"Resultado de Busqueda",
-        //buscar:buscar})
+    aboutUs:(req,res)=>{
+        res.render('aboutus',{
+            title:"Quienes somos"
+        })
     }
+  
 }

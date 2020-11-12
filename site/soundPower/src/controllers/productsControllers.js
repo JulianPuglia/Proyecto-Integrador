@@ -1,7 +1,7 @@
 const dbProducts = require('../data/database') //requiero la base de datos de productos
 const fs = require('fs');
 const path = require('path');
-
+const {check,validationResult,body} = require('express-validator');
 const sequelize = require('sequelize');
 const db  = require('../database/models');
 const { Result } = require('express-validator');
@@ -94,6 +94,26 @@ module.exports = {
                 price:producto.price,
                 image:producto.image
         })
+    },
+    search: function(req, res) {
+  
+        let errors = validationResult(req); 
+        
+        if(errors.isEmpty()){ 
+            let buscar = req.query.search;
+            let productos = [];
+            dbProducts.forEach(producto => {
+                if (producto.name.toLowerCase().includes(buscar)) {
+                    productos.push(producto)
+                }
+            })
+        res.render('products', {
+            title: "Resultado de la búsqueda",
+            producto: productos,
+     
+        })
+    }else{
+        return res.redirect('/')
     }
-   
+    }
 }
