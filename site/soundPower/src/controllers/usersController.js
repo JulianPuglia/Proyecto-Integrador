@@ -12,6 +12,7 @@ module.exports = {
         res.render("register");
     },
 
+<<<<<<< HEAD
   processRegister: (req, res) => {
     
     let errors = validationResult(req);
@@ -25,6 +26,21 @@ module.exports = {
           password: bcrypt.hashSync(req.body.pass, 10),
           avatar: req.avatar,
           rol:"user"
+=======
+    save : (req, res, next) => {
+
+      let errors = validationResult(req);
+      if(errors.isEmpty()){
+        db.Users.create({
+            nombre :req.body.fname ,
+            apellido : req.body.lname,
+            email: req.body.email,
+            password:bcrypt.hashSync(req.body.pass, 10),
+            avatar: req.avatar,
+            rol:"user"
+        })
+        .then(result=>{
+>>>>>>> 01d83c7ee6c779bab1339c9a05aa39c60668c98e
 
         })
         .then((result) => {
@@ -39,10 +55,14 @@ module.exports = {
 
         });
     } else {
+<<<<<<< HEAD
 
       console.log( errors.errors )
       res.render("register", { errors: errors.errors ,old:req.body});
 
+=======
+      res.render("register", { errors: errors.errors, old:req.body });
+>>>>>>> 01d83c7ee6c779bab1339c9a05aa39c60668c98e
     }
 
   },

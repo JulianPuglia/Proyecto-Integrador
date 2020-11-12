@@ -25,4 +25,8 @@ const upload =  multer({
 
 
 
+<<<<<<< HEAD
 module.exports = upload
+=======
+module.exports = upload
+>>>>>>> 01d83c7ee6c779bab1339c9a05aa39c60668c98e

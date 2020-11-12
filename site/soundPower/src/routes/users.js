@@ -8,7 +8,12 @@ const upAvatar = require('../middlewares/upAvatar')
 
 /* register page */
 router.get('/register', controller.register);
+<<<<<<< HEAD
 router.post('/register',upAvatar.any(),registerValidator,controller.processRegister);
+=======
+router.post('/register',upAvatar.any(),registerValidator,controller.save);
+
+>>>>>>> 01d83c7ee6c779bab1339c9a05aa39c60668c98e
 //router.post('/register',controller.save)
 
 // login page
