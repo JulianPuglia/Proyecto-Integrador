@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Users";
+    let alias = "users";
     let cols = {
         id:{
             type:dataTypes.INTEGER(),
@@ -44,6 +44,10 @@ module.exports = (sequelize, dataTypes) => {
         
         avatar:{
             type:dataTypes.STRING(100)
+        },
+        rol:{
+            type:dataTypes.STRING(20),
+            allowNull:false
         }
     }
     let config = {
@@ -51,9 +55,9 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false,
         
     }
-    const User = sequelize.define(alias,cols,config);
+    let User = sequelize.define(alias,cols,config);
     User.associate = function(models){
-        User.belongsToMany(models.Products,{
+        User.belongsToMany(models.products,{
             as : 'productos', 
             through : 'cart',//tabla intermedia 
             foreignKey : 'usuario_id',//la clave foranea de este modelo en esa tabla intermedia

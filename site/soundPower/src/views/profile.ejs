@@ -1,105 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
   <%- include("partials/head")%>
-
+  <script src="/javascript/userUpdate.js"></script>
   <body>
     <%- include("partials/navbar") %>
-   <%- include("partials/social") %>
+    <%- include("partials/social") %>
 
     <div class="container">
-      <div class="row">
-        <div class="col-12">
+
           <section class="perfilUsuario">
-            <div class="row perfil">
+  
 
                 <div class="titulo col-12">
-                    <h2>
-                        <%= title %>
+                    <h2 style="text-align: center;">
+                      <%=userSession.nick.toUpperCase()%>
                     </h2>
                 </div>
-                   <div class="contenido">
-                       
-                              <form action="/users/profile" method="POST">
-                                <fieldset>
-                                  <div class="Datos col-12 col-lg-6">
+                  <div class="contenido ">
+                    <div class="row">
+      
+                      <% if (typeof errors != 'undefined') { %>
+                 
+                      <% for( let i = 0; i < errors.length; i++) { %> 
+                       <ul>
+                       <li  style="color:red; display: block; " >
+                         <%= errors[i].msg %>  
+                       </li>
+                     </ul><br>
+                      <% } %> 
+                      <% } %> 
+                      <form  class="col-12 col-md-6" action="">
+                     <img src="<%=userData.avatar%>" alt="usuario">
+                    </form>
+                      <form class="col-12 col-md-6" id="profile" action="/users/profile/:<%-userData.id %>" _method=PUT  method="POST" enctype="multipart/form-data">
+                     
+                         
+                         
+                        <fieldset >
+                                  
+                                  <div class="Datos ">
                                     <h2 class="fs-title">Datos Personales</h2>
-                                    <label class="col-12" for="name">Nombre</label>
+                                    <label  for="nombre">Nombre</label>
+                                    <input
+                                      type="text"
+                                      class="form-control" <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>"
+                                                id="fname"  name="nombre" placeholder="<%= userData.nombre%>" value="<%= (typeof old != 'undefined' && old.fname)?old.fname: userData.nombre %>" 
+                                                title="El nombre debe tener más de dos caracteres"/>
+                                                <small id="errorFname" class="text-danger"><%= (typeof errors != 'undefined' && errors.fname)?errors.fname.msg: "" %> </small>
+                                    
+                                    <label  for="email">Apellido</label>
+                                    <input
+                                      type="text"
+                                      class="form-control" <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>"
+                                      id="lname"  name="apellido" placeholder="<%= userData.apellido%>"  value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido: userData.apellido %>"  title="El apellido debe tener más de dos caracteres"/>
+                                      <small id="errorLname" class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.lname.msg: "" %> </small>
+                                    
+                                    <label  for="phone">Telefono</label>
                                     <input
                                       class="col-12"
                                       type="text"
-                                      name="fname"
-                                      placeholder="<%= user.nombre %>"
+                                      name="telefono"
+                                      placeholder="<%= userData.telefono %>"
                                     />
-                                    <label class="col-12" for="lname"><Apellido></label>
-                                    <input
-                                      class="col-12"
-                                      type="text"
-                                      name="lname"
-                                      placeholder = '<%= user.apellido %>' 
-                                    />
-                                    <label class="col-12" for="phone">Telefono</label>
-                                    <input
-                                      class="col-12"
-                                      type="text"
-                                      name="phone"
-                                      placeholder="<%= user.telefono %>"
-                                    />
-                                    <label class="col-12 col-lg-6" for="address">Domicilio</label>
-                                    <input class="col-12" name="address" placeholder="<%= user.direccion %>" />
+                                    <label class="" for="direccion">Domicilio</label>
+                                    <input class="col-12" name="direccion" placeholder="<%= userData.direccion %>" />
                                   </div>
-                                </fieldset>
-                                <fieldset >
-                                  <div class="Usuario col-12 col-lg-6">
+                        </fieldset>
+                        <fieldset >
+                                  <div class="Usuario">
                                     <h2 class="fs-title">Crea tu Usuario</h2>
+
+                                      <div class="form-group">
                                     <label class="col-12" for="email">Email</label>
                                     <input
-                                      class="col-12"
                                       type="text"
-                                      name="email"
-                                      placeholder="<%= user.email %>"
-                                    />
-                                    <label class="col-12" for="password">Contraseña</label>
+                                        class="form-control" <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>"
+                                                id="email" value="<%= (typeof old != 'undefined' && old.email)?old.email: userData.email %>"  
+                                                name="email" placeholder="<%= userData.email%>"/>
+                                                <small id="errorEmail" class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+                                    <label  for="password">Contraseña</label>
                                     <input
-                                      class="col-12"
                                       type="password"
-                                      name="pass"
-                                      placeholder="<%= user.contraseña %>"
-                                    />
-                                    <label class="col-12" for="password">Repita Contraseña</label>
+                                      class="form-control" <%= (typeof errors != 'undefined' && errors.contraseña)?"is-invalid": ""  %>"
+                                                id="pass" placeholder="contraseña" name="pass"/>
+                                                <small id="errorPass" class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
+                                              </div>
+                                    
+                                    <label  for="password">Repita Contraseña</label>
                                     <input
-                                      class="col-12"
                                       type="password"
-                                      name="cpass"
-                                      placeholder="<%= user.contraseña %>"
-                                    />
-                                  
-                                </fieldset>
-                               
-                               
-                                    <div class="btEnviar col-2">
-                                      <button class="btn btn-submit" type="submit">Actualizar</button>
+                                      class="form-control" <%= (typeof errors != 'undefined' && errors.pass)?"is-invalid": ""  %>"
+                                                id="cpass" placeholder="contraseña" name="cpass"/>
+                                                <small id="errorCpass" class="text-danger"><%= (typeof errors != 'undefined' && errors.cpass)?errors.cpass.msg: "" %> </small>
                                     </div>
-                                  
-                                
-                               </form>
-                            </div>
-
-
-                             
-                              
-                            </div>
-                        </div>
-                
-                </div>
-            </div>
-        </section>
+                                    <div class="btEnviar col-3" style="background-color: #e4e4e4; text-decoration: #045757; border-radius: 5px;">
+                                      <button class="btn btn-submit" type="submit" style="text-align: center;">Actualizar</button>
+                                    </div>
+                        </fieldset>
+                          
+                      </form>
+                    </div>
+                  </div>
+          </section>
     </div>
 
 
 
-        </div>
-      </div>
-    </div>
+    
     <%- include("partials/footer") %>
   </body>
 </html>

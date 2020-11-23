@@ -1,8 +1,14 @@
-.principal h3 {
+.principal  h3 {
+  
+  background-color: #045757;
   text-align: center;
   color: #e4e4e4;
   text-transform: uppercase;
   margin-bottom: 10px;
+  
+}
+.principal .contMarcas{
+  margin-top: 15px;
 }
 .productos {
   background-color: #045757;
@@ -11,6 +17,7 @@
   padding: 10px 0px;
   border: 2px solid #044343;
   justify-content: center;
+  
 }
 .carousel{
  display: none

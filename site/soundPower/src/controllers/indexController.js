@@ -1,5 +1,12 @@
-const { products } = require("./productsControllers")
+
 let dbProduct = require('../data/database')
+const dbFaqs = require('../data/faqs') //requiero la base de datos de productos
+const fs = require('fs');
+const path = require('path');
+
+const db = require("../database/models");
+const Sequelize = require("sequelize");
+let Op = Sequelize.Op;
 
 module.exports = {
     index : (req, res) => {
@@ -14,7 +21,8 @@ module.exports = {
     },
     faqs : (req, res) => {
         res.render('faqs',{
-            title:"Preguntas Frecuentes"
+            title:"Preguntas Frecuentes",
+            faqs:dbFaqs
         })
     },
     contact : (req, res) => {
@@ -22,13 +30,10 @@ module.exports = {
             title:"Contacto"
         })
     },
-    submit :(req,res)=>{
-
-    },
-    search:(req, res) =>{
-        //let buscar = req.query.search
-        //res.render('products',{
-        //title:"Resultado de Busqueda",
-        //buscar:buscar})
+    aboutUs:(req,res)=>{
+        res.render('aboutus',{
+            title:"Quienes somos"
+        })
     }
+  
 }

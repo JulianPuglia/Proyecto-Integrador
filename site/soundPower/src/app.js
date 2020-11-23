@@ -12,6 +12,10 @@ const localUserCheck = require('./middlewares/localUserCheck');
 
 
 var app = express();
+// parse application/x-www-form-urlencoded
+//app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+//app.use(bodyParser.json())
 
 app.listen(3030,() => console.log('servidor levantado en el puerto 3030'));
 
