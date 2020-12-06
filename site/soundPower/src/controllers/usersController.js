@@ -8,7 +8,8 @@ const Sequelize = require("sequelize");
 let Op = Sequelize.Op;
 
 module.exports = {
-  // registro de usuarios y administradores
+
+// registro de usuarios y administradores
   register: (req, res) => {
     res.render("register");
   },
@@ -17,65 +18,80 @@ module.exports = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      db.users
-        .create({
-          nombre: req.body.fname,
-          apellido: req.body.lname,
-          email: req.body.email,
-          contraseña: bcrypt.hashSync(req.body.pass, 10),
-          avatar: req.files[0] ? req.files[0].filename : "default-image.png",
-          rol: req.body.rol,
-        })
-        .then((result) => {
-          res.redirect("/users/login");
-        })
-        .catch((error) => {
-          res.send(error);
+      db.users.create({
+        nombre: req.body.fname,
+        apellido: req.body.lname,
+        email: req.body.email,
+        contraseña: bcrypt.hashSync(req.body.pass, 10),
+        avatar: req.files[0] ? req.files[0].filename : "default-image.png",
+        rol: req.body.rol
+      }) .then((user) => {
+        req.session.user = {
+          id: user.id,
+          nick: user.nombre + " " + user.apellido,
+          email: user.email,
+          avatar:user.avatar,
+          rol:user.rol
+        };
+        res.locals.user = req.session.user;
+        res.render("index", {
+          
+          userSession: req.session.user,
+          avatar:user.avatar
+
         });
-    } else {
-      res.render("register", {
-        errors: errors.errors,
-        old: req.body,
-      });
-    }
-  },
-  // login  y logout
+
+    
+      }).catch(error => {
+        res.send(error)
+      })
+    }else{
+      res.render("register", { 
+        errors: errors.errors, 
+        old: req.body})
+    }      
+  }
+  ,
+ // login  y logout
   Login: (req, res) => {
     res.render("login", {
       title: "Ingresá a tu cuenta",
+
     });
   },
 
   processLogin: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      db.users
-        .findOne({
-          where: {
-            email: req.body.email,
-          },
-        })
-        .then((user) => {
+      db.users.findOne({
+        where: {
+          email: req.body.email,
+        },
+      })
+      .then((user) => {
           req.session.user = {
             id: user.id,
             nick: user.nombre + " " + user.apellido,
             email: user.email,
-            avatar: user.avatar,
-            rol: user.rol,
+            avatar:user.avatar,
+            rol:user.rol
           };
           res.locals.user = req.session.user;
           res.render("index", {
+            
             userSession: req.session.user,
-            avatar: user.avatar,
+            avatar:user.avatar
+
           });
+
         })
         .catch((error) => res.send(error));
     } else {
-      res.render("login", {
-        title: "Ingresá a tu cuenta",
-
-        errors: errors.mapped(),
-        old: req.body,
+      res.render("login", {   
+        title : "Ingresá a tu cuenta",
+      
+      errors : errors.mapped(),
+      old : req.body
       });
     }
   },
@@ -87,97 +103,95 @@ module.exports = {
   },
 
   //base de datos de perfiles
-  profiles: (req, res) => {
-    db.users.findAll().then((users) => {
-      res.render("users", {
-        title: "usuarios".toUpperCase(),
-        users: users,
-      });
-    });
+  profiles:(req,res)=>{
+  db.users.findAll()
+  .then ((users) =>{
+  res.render("users", {
+    title:"usuarios".toUpperCase(),
+    users:users,
+  }
+
+  ) 
+  })
   },
 
-  adminProfiles: (req, res) => {
-    db.users
-      .update({
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        email: req.body.email,
-        rol: req.body.rol,
-      },
-      {
-        where: {
-          id:users.id,
-        }
-      })
+  adminProfiles: (req,res)=>{
+    db.users.update({
+        
+      nombre: req.body.nombre,
+      apellido: req.body.apellido,
+      email: req.body.email,
+      rol: req.body.rol
+      
+    },{
+      where:{
+          
+      id:req.body.id
+    }
+  })
       .then((result) => {
-        return res.redirect("users", {
-          title: "usuarios".toUpperCase(),
-          users: users,
+        return res.redirect("/users/admin",{
+         
         });
-      });
+      })
   },
 
-  //perfil de usuario
+
+ //perfil de usuario
   profile: (req, res) => {
-    db.users
-      .findByPk(req.session.user.id)
+    
+    db.users.findByPk(req.session.user.id)
       .then((user) => {
         res.render("profile", {
           userData: user,
           userSession: req.session.user,
-          rol: req.body.rol,
-          id: user.id,
-          avatar: user.avatar,
         });
       })
       .catch((error) => {
-        res.send(error);
+        res.send(error);  
       });
   },
-
   processProfile: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      db.users
-        .update(
-          {
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            direccion: req.body.direccion,
-            telefono: req.body.telefono,
-            contraseña: bcrypt.hashSync(req.body.pass, 10),
-          },
-          {
-            where: {
-              id: req.session.user.id,
-            },
-          }
-        )
+      db.users.update({
+        
+        nombre: req.body.fname,
+        apellido: req.body.lname,
+        email: req.body.email,
+        direccion: req.body.direccion,
+        //telefono: req.body.phone,
+        
+      },{
+        where:{
+            
+        id:req.params.id
+      }
+      })
         .then((result) => {
-          return res.redirect("login" + req.session.user.id, {
-            userSession: req.session.user,
-          });
+          return res.redirect("/" )
+
         })
+      
         .catch((err) => {
           console.log(err);
-        });
-    } else {
+        })
+        
+      } else {
       res.render("profile", { errors: errors.errors });
     }
   },
-  delete: (req, res) => {
-    db.users
-      .destroy({
-        where: {
-          id: req.params.id,
-        },
+  delete : (req,res)=>{
+    db.users.destroy ({
+        where:{ 
+      id :req.params.id
+        }
       })
-      .then((result) => {
-        return res.render("users", {
-          title: "usuarios".toUpperCase(),
-          users: users,
-        });
-      });
-  },
-};
+      .then ((result) => {
+          return res.redirect("/users/admin")
+      })
+    
+  
+  }, 
+  
+}

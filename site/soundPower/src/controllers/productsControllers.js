@@ -22,13 +22,17 @@ module.exports = {
       });
   },
   productsDetails: (req, res) => {
-    db.products.findByPk(req.params.id).then((product) => {
+    db.products.findByPk(req.params.id)
+    .then((product) => {
       res.render("productDetails", {
         title: "Detalle del Producto",
         product: product,
       });
     });
   },
+
+
+  //agregar producto
   productsAdd: (req, res) => {
     let categorias = db.categories.findAll({
       order: [["id", "ASC"]],
@@ -36,13 +40,17 @@ module.exports = {
     let marcas = db.Marcas.findAll({
       order: [["id", "ASC"]],
     });
+
+        
+
     
-    Promise.all([categorias, marcas]).then(([categorias, marcas, ]) => {
+
+    Promise.all([categorias, marcas]).then(([categorias, marcas]) => {
       res.render("productAdd", {
         title: "Agregar Productos",
         categorias: categorias,
         marcas: marcas,
-        
+   
       });
     });
   },
@@ -52,90 +60,134 @@ module.exports = {
         nombre: req.body.titulo,
         descripcion: req.body.descripcion,
         descuento: req.body.discount,
+   
         precio: req.body.precio,
         marca_id: req.body.mark,
         categoria_id: req.body.class,
         imagen: req.files[0] ? req.files[0].filename : "default-image.png",
       })
       .then((Result) => {
-        return res.render("products", {
-          title: "Productos",
-          products: db.products,
-        })})
-  
+        return res.redirect("/products");
+      });
+    res.render("products", {
+      title: "Productos",
+      products: db.products,
+    });
   },
+
+  //carrito
   cart: (req, res) => {
     res.render("cart", {
       title: "Carrito",
     });
   },
+
+  //modificar productos
   modify: (req, res) => {
     let id = req.params.id;
-    db.products.findAll({
-      where: {
-        id: id,
-      }.then((Categoria) => {
+    db.products.findByPk(id, 
+      {includes: [{ association: "marca", association: "categoria" }]})
+      .then((producto) => {
         res.render("modifyProduct", {
           title: "Modificar Productos",
-          id: id,
           producto: producto,
-          price: producto.price,
-
-          description: producto.description,
-          category: producto.category,
+          
+       
+          
         });
-      }),
+      })
+    },
+
+  save: (req,res) =>{
+
+    db.products
+    .update({
+      nombre: req.body.titulo,
+      descripcion: req.body.descripcion,
+      descuento: req.body.discount,
+      precio: req.body.precio,
+      marca_id: req.body.mark,
+      categoria_id: req.body.class,
+   
+    },{
+      where:{
+          
+      id:req.params.id
+    }
+  })
+    .then((Result) => {
+      return res.redirect("/products/modify/"+req.params.id);
     });
+  res.render("products", {
+    title: "Productos",
+    products: db.products,
+  });
   },
+
+  //descuentos
   discount: (req, res) => {
-    db.products.findAll().then((products) => {
+    db.products.findAll({
+      where: db.products.discount > 10 
+    })
+    .then((products) => {
       res.render("products", {
         title: "Oportunidades",
         products: products,
       });
     });
   },
+
+  //categorias
   category: (req, res) => {
     let category = req.params.category;
-    db.products
+    db.categories
       .findAll({
-        where: {
-          Categoria: category,
-        },
+        where:{ 
+          nombre:category,
+        }
       })
-      .then((Categoria) => {
+      .then((products) => {
         res.render("products", {
           title: "Categoria " + category.toUpperCase(),
-          producto: producto,
-          price: producto.price,
-          image: producto.image,
+          products: products,
+         
         });
       });
   },
+
+  //busqueda
   search: function (req, res) {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
       let buscar = req.query.search;
-      let productos = [];
-      dbProducts.forEach((producto) => {
-        if (producto.name.toLowerCase().includes(buscar)) {
-          productos.push(producto);
-        }
-      });
+     
+      db.products.findAll({
+        where: db.products.nombre == buscar
+       
+        
+      }).then ((products)=>{
+     
       res.render("products", {
         title: "Resultado para " + buscar,
-        producto: productos,
-      });
+        products: products,
+      })})
     } else {
       return res.redirect("/");
     }
   },
+
+  //borrar producto
   delete: (req, res) => {
     db.products.destroy({
-      where: {
-        id: req.params.id,
-      }.then((result) => {}),
-    });
-  },
+      
+        where: {
+            id: req.params.id
+        }
+      })
+      .then ((result) => {
+          return res.redirect("/products")
+        })
+        }
+      
 };

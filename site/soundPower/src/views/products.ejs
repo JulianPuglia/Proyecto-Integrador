@@ -9,35 +9,37 @@
 <div class="container">
     <section class="listadoProductos">
     <div class="row products">
-        <div class="col-12">
+        <div class="col-12 " >
             <h2>
             <%= title %>
             </h2>
-        <div class="filas">
-                        <% for (let i = 0; i < products.length;i++) { %>
-                       <ul style="list-style: none;">
-                         <li>   <article class="row">
-                            <figure class="col-12 col-md-2>
-                            
-                                    <div ">
-                                <img src="/images/products/<%- products[i].imagen %>" alt="">
-                                    </div>
-                            </figure>
-                                    <div style="margin: 2vh 0;" class="col-12 col-md-10">
-                                    <a  href="/products/details/:products[i].id">  <%= products[i].nombre%></a>
-                                     <h5 style="margin-top: 2vh;"> $ <%= products[i].precio %></h5>
-                                    </div>
-                                                        
-                        </li> </article>
-                    </ul>     
-                            <% } %> 
-                        </div>
-                    </div>
-                </section>
-            </div>
-            
         </div>
+
+                <% for (let i = 0; i < products.length;i++) { %>
+                    <div class="filas col-12 col-md-6 col-xl-3 ">
+
+                <div class="contenido ">
+                            <figure class="justify-content-center align-items-center">
+                                <a  class="d-flex justify-content-center align-items-center; "  href="products/details/<%= products[i].id %> "><img style="border-radius: 3px; height: 30vh; width: 80%;" src="/images/products/<%- products[i].imagen %>  " alt=" "></a>
+                            </figure>
+
+                            <article>
+                                <h2>$
+                                    <%- (products[i].precio - products[i].precio * products[i].descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+                                </h2>
+                                <% if (products[i].descuento != 0) { %>
+                                    <span><%- products[i].descuento %>% OFF</span>
+                                    <% } %>
+                                        <p>
+                                            <%- products[i].nombre %>
+                                        </p>
+                            </article>
+                    </div>
+                </div>
+                    <% } %> 
+        
     </div>
+    </section>
 </div>
 
     <%- include("partials/footer") %>
